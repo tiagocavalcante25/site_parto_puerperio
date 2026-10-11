@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Assistência ao Parto & Puerpério | Guia Interativo USMLE Step 2/3 & Ivy League</title>
+  
+  <!-- Meta tags for SEO, Mobile Web App & Social Sharing -->
+  <meta name="description" content="Guia definitivo e plataforma interativa de Assistência ao Parto e Puerpério. Cobre mecanismo do parto, partograma da OMS, distócias, analgesia, HPP, aleitamento materno e complicações puerperais para USMLE Step 2 CK, Step 3 e Residência Médica.">
+  <meta name="keywords" content="parto, puerpério, partograma, distócia de ombros, McRoberts, hemorragia pós-parto, balão de Bakri, endometrite, USMLE Step 2 CK, aleitamento materno">
+  <meta name="author" content="Internato GO & Deep Learning Medical Hub">
+  <meta name="theme-color" content="#0d9488">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Previne Flash of Unstyled Content (FOUC) ao carregar tema escuro e escala de fonte -->
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        const savedFontSize = localStorage.getItem('fontSize') || 'normal';
+        document.documentElement.setAttribute('data-font-size', savedFontSize);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-200 antialiased selection:bg-teal-500 selection:text-white">
+
+  <!-- NAVIGATION HEADER -->
+    <!-- ======================================================================
+       HEADER / NAVBAR FIXA COM DESIGN FLUIDO, NAVEGAÇÃO DIRETA E SEM GAVETA REDUNDANTE
+       ====================================================================== -->
+  <header class="glass-header border-b border-slate-200/80 dark:border-slate-800/80 shadow-sm transition-colors">
+    <!-- Nível 1: Barra Principal Superior -->
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-14 sm:h-16 gap-2 sm:gap-4">
+        
+        <!-- Brand & Title (Responsive: adapts gracefully from 320px to 4K) -->
+        <a href="#modulo-12" class="flex items-center gap-2 sm:gap-3 group flex-shrink-0" title="Ir para o início do Guia de Parto & Puerpério">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-teal-600 to-emerald-500 flex items-center justify-center text-white shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform flex-shrink-0">
+            <i class="fa-solid fa-person-breastfeeding text-sm sm:text-base"></i>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5 sm:gap-2">
+              <span class="nav-brand-title font-extrabold tracking-tight text-slate-900 dark:text-white leading-none">Parto & Puerpério</span>
+              <span class="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-teal-100 text-teal-800 dark:bg-teal-950 dark:text-teal-300 border border-teal-200 dark:border-teal-800">Parte 2</span>
+            </div>
+            <span class="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 font-medium hidden sm:block">USMLE Step 2/3 • Residência Médica • FEBRASGO / OMS</span>
+          </div>
+        </a>
+
+        <!-- Quick Search Trigger Button (Ctrl+K) -->
+        <div class="flex items-center flex-1 max-w-xs sm:max-w-sm lg:max-w-md mx-1 sm:mx-4">
+          <button onclick="openSearchModal()" title="Pesquisa Rápida (Ctrl+K)" class="w-full px-3 py-1.5 sm:py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 text-slate-500 dark:text-slate-400 hover:border-teal-500 text-xs font-medium flex items-center justify-between transition-all cursor-pointer">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-magnifying-glass text-teal-500 text-xs sm:text-sm"></i>
+              <span class="truncate">Buscar temas, escores, fármacos...</span>
+            </div>
+            <kbd class="hidden sm:inline-block px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[10px] text-slate-400 border border-slate-200 dark:border-slate-700">Ctrl K</kbd>
+          </button>
+        </div>
+
+        <!-- Action Buttons & Utilities -->
+        <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+          
+          <!-- Didactic Mode Toggle (Modo 5 Anos) -->
+          <div class="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs font-bold text-amber-700 dark:text-amber-400" title="Ativa ou destaca analogias didáticas (Modo 5 Anos)">
+            <label for="didactic-toggle" class="cursor-pointer flex items-center gap-1.5">
+              <span class="text-[11px] hidden lg:inline">🎈 Modo 5 Anos</span>
+              <span class="text-[11px] lg:hidden">🎈 5 Anos</span>
+              <input type="checkbox" id="didactic-toggle" checked onchange="toggleDidacticMode()" class="sr-only peer">
+              <div class="w-7 h-3.5 bg-slate-300 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all peer-checked:bg-amber-500"></div>
+            </label>
+          </div>
+
+          <!-- Seletor Dinâmico de Tamanho de Fonte (A / A+ / A++) -->
+          <div class="flex items-center bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-0.5" role="group" aria-label="Controle de tamanho de fonte">
+            <button type="button" onclick="setFontSize('normal')" data-font-btn="normal" aria-label="Fonte padrão" title="Fonte padrão" class="font-size-btn px-2 py-1 text-xs font-bold rounded-lg transition-colors">A</button>
+            <button type="button" onclick="setFontSize('large')" data-font-btn="large" aria-label="Fonte ampliada" title="Fonte ampliada (+15%)" class="font-size-btn px-2 py-1 text-xs font-bold rounded-lg transition-colors">A+</button>
+            <button type="button" onclick="setFontSize('xlarge')" data-font-btn="xlarge" aria-label="Fonte máxima" title="Fonte máxima (+30%)" class="font-size-btn px-2 py-1 text-xs font-bold rounded-lg transition-colors">A++</button>
+          </div>
+
+          <!-- Dark Mode Toggle -->
+          <button onclick="toggleDarkMode()" title="Alternar tema claro/escuro" aria-label="Alternar modo claro/escuro" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:text-teal-500 flex items-center justify-center transition-all cursor-pointer">
+            <i id="theme-icon" class="fa-solid fa-moon text-xs sm:text-sm"></i>
+          </button>
+
+          <!-- Print / PDF Export Button -->
+          <button onclick="window.print()" title="Exportar ou Imprimir Resumo" class="hidden sm:flex p-1.5 px-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold items-center gap-1.5 transition-all shadow-md shadow-teal-500/20 cursor-pointer">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span class="hidden md:inline">PDF</span>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Nível 2: Faixa Subnav de Módulos & Ferramentas (Scroll Horizontal Fluido sem quebra) -->
+    <div class="border-t border-slate-200/70 dark:border-slate-800/70 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1.5 text-xs font-semibold whitespace-nowrap">
+          <span class="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 mr-1 flex items-center gap-1 flex-shrink-0">
+            <i class="fa-solid fa-book-medical text-teal-500"></i> Módulos:
+          </span>
+          <a href="#modulo-12" class="subnav-pill px-2.5 py-1 rounded-lg text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800/80 transition-colors flex items-center gap-1">
+            <span class="w-4 h-4 rounded bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 text-[10px] font-bold flex items-center justify-center">12</span>
+            Mecanismo do Parto
+          </a>
+          <a href="#modulo-13" class="subnav-pill px-2.5 py-1 rounded-lg text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800/80 transition-colors flex items-center gap-1">
+            <span class="w-4 h-4 rounded bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 text-[10px] font-bold flex items-center justify-center">13</span>
+            Partograma OMS
+          </a>
+          <a href="#distocia-ombros" class="subnav-pill px-2.5 py-1 rounded-lg text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800/80 transition-colors flex items-center gap-1">
+            <span class="w-4 h-4 rounded bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 text-[10px] font-bold flex items-center justify-center">16</span>
+            Distócias & McRoberts
+          </a>
+          <a href="#modulo-17" class="subnav-pill px-2.5 py-1 rounded-lg text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800/80 transition-colors flex items-center gap-1">
+            <span class="w-4 h-4 rounded bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 text-[10px] font-bold flex items-center justify-center">17</span>
+            HPP & Bakri
+          </a>
+          <a href="#modulo-18" class="subnav-pill px-2.5 py-1 rounded-lg text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800/80 transition-colors flex items-center gap-1">
+            <span class="w-4 h-4 rounded bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 text-[10px] font-bold flex items-center justify-center">18</span>
+            Puerpério & Involução
+          </a>
+          <a href="#modulo-19" class="subnav-pill px-2.5 py-1 rounded-lg text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800/80 transition-colors flex items-center gap-1">
+            <span class="w-4 h-4 rounded bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 text-[10px] font-bold flex items-center justify-center">19</span>
+            Aleitamento Materno
+          </a>
+          <a href="#modulo-20" class="subnav-pill px-2.5 py-1 rounded-lg text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800/80 transition-colors flex items-center gap-1">
+            <span class="w-4 h-4 rounded bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 text-[10px] font-bold flex items-center justify-center">20</span>
+            Complicações Puerperais
+          </a>
+
+          <!-- Separador -->
+          <span class="h-4 w-px bg-slate-300 dark:bg-slate-700 mx-1 flex-shrink-0"></span>
+
+          <!-- Ferramentas Clínicas Diretas -->
+          <span class="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 mr-1 flex items-center gap-1 flex-shrink-0">
+            <i class="fa-solid fa-stethoscope text-amber-500"></i> Ferramentas:
+          </span>
+          <a href="#simulador-partograma" class="subnav-pill px-2.5 py-1 rounded-lg text-cyan-700 dark:text-cyan-400 hover:bg-cyan-50 dark:hover:bg-cyan-950/40 transition-colors flex items-center gap-1">
+            <i class="fa-solid fa-chart-line text-xs"></i>
+            Partograma Vivo
+          </a>
+          <a href="#calculadora-hpp" class="subnav-pill px-2.5 py-1 rounded-lg text-rose-700 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-950/40 transition-colors flex items-center gap-1">
+            <i class="fa-solid fa-droplet text-xs"></i>
+            Risco HPP
+          </a>
+          <a href="#calculadora-epds" class="subnav-pill px-2.5 py-1 rounded-lg text-emerald-700 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 transition-colors flex items-center gap-1">
+            <i class="fa-solid fa-heart-pulse text-xs"></i>
+            Escala EPDS
+          </a>
+          <a href="#flashcards-section" class="subnav-pill px-2.5 py-1 rounded-lg text-purple-700 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-950/40 transition-colors flex items-center gap-1">
+            <i class="fa-solid fa-layer-group text-xs"></i>
+            Flashcards 3D
+          </a>
+          <a href="#quiz-section" class="subnav-pill px-2.5 py-1 rounded-lg text-teal-700 dark:text-teal-400 hover:bg-teal-50 dark:hover:bg-teal-950/40 transition-colors flex items-center gap-1">
+            <i class="fa-solid fa-graduation-cap text-xs"></i>
+            Simulado
+          </a>
+          <a href="#high-yield-summary" class="subnav-pill px-2.5 py-1 rounded-lg text-amber-700 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-950/40 transition-colors flex items-center gap-1">
+            <i class="fa-solid fa-bolt text-xs"></i>
+            High-Yield
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- READING PROGRESS BAR - Attached right at header bottom -->
+    <div id="reading-progress" class="h-1 bg-gradient-to-r from-teal-400 via-emerald-500 to-cyan-500 transition-all duration-150 pointer-events-none" style="width: 0%"></div>
+  </header>
+
+<!-- HERO SECTION -->
+  <section class="relative overflow-hidden pt-12 pb-16 border-b border-slate-200 dark:border-slate-800 bg-gradient-to-b from-teal-50/50 via-white to-slate-50 dark:from-slate-900/60 dark:via-slate-950 dark:to-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-700 dark:text-teal-300 text-xs font-bold mb-4">
+          <span class="flex h-2 w-2 rounded-full bg-teal-500 animate-ping"></span>
+          Guia Nível USMLE Step 2 CK / Step 3 & Ivy League
+        </div>
+        
+        <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">
+          Assistência ao <span class="bg-gradient-to-r from-teal-600 via-emerald-600 to-cyan-600 bg-clip-text text-transparent">Parto & Puerpério</span>
+        </h1>
+        
+        <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+          Do mecanismo do parto com os <strong>7 movimentos cardinais</strong> à vigilância do <strong>partograma da OMS</strong>, manejo de <strong>distócia de ombros</strong>, hemostasia escalonada na <strong>HPP</strong>, neuroendocrinologia da <strong>lactação</strong> e diagnóstico precoce de complicações puerperais.
+        </p>
+
+        <!-- Metrics Badges -->
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
+          <div class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="text-xs text-slate-400 font-bold uppercase">7 Movimentos</div>
+            <div class="text-lg font-black text-teal-600 dark:text-teal-400">Cardinais</div>
+            <div class="text-[11px] text-slate-500">Mecanismo do Parto</div>
+          </div>
+          <div class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="text-xs text-slate-400 font-bold uppercase">4 T's da HPP</div>
+            <div class="text-lg font-black text-rose-600 dark:text-rose-400">Atonia (70%)</div>
+            <div class="text-[11px] text-slate-500">Balão de Bakri & Uterotônicos</div>
+          </div>
+          <div class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="text-xs text-slate-400 font-bold uppercase">Fase Ativa</div>
+            <div class="text-lg font-black text-emerald-600 dark:text-emerald-400">≥ 6 cm (ACOG)</div>
+            <div class="text-[11px] text-slate-500">Linhas de Alerta e Ação</div>
+          </div>
+          <div class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="text-xs text-slate-400 font-bold uppercase">6 Ilustrações</div>
+            <div class="text-lg font-black text-cyan-600 dark:text-cyan-400">Atlas HD</div>
+            <div class="text-[11px] text-slate-500">Textos em Português</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- QUICK NAVIGATION DRAWER / INDEX -->
+  <section id="modulos-index" class="py-8 bg-slate-100/60 dark:bg-slate-900/40 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-4 flex items-center gap-2">
+        <i class="fa-solid fa-compass text-teal-500"></i> Navegação Rápida pelos Módulos
+      </h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+        <a href="#modulo-12" class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-md transition-all group">
+          <div class="text-[10px] font-bold text-teal-600 dark:text-teal-400 uppercase">Módulo 12</div>
+          <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-teal-600 transition-colors">Trabalho de Parto</div>
+        </a>
+        <a href="#modulo-13" class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-md transition-all group">
+          <div class="text-[10px] font-bold text-teal-600 dark:text-teal-400 uppercase">Módulo 13</div>
+          <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-teal-600 transition-colors">Partograma OMS</div>
+        </a>
+        <a href="#modulo-14" class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-md transition-all group">
+          <div class="text-[10px] font-bold text-teal-600 dark:text-teal-400 uppercase">Módulo 14</div>
+          <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-teal-600 transition-colors">Analgesia & Raqui</div>
+        </a>
+        <a href="#modulo-15" class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-md transition-all group">
+          <div class="text-[10px] font-bold text-teal-600 dark:text-teal-400 uppercase">Módulo 15</div>
+          <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-teal-600 transition-colors">Parto Humanizado</div>
+        </a>
+        <a href="#modulo-16" class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-md transition-all group">
+          <div class="text-[10px] font-bold text-teal-600 dark:text-teal-400 uppercase">Módulo 16</div>
+          <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-teal-600 transition-colors">Distócias & Fórceps</div>
+        </a>
+        <a href="#modulo-17" class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-md transition-all group">
+          <div class="text-[10px] font-bold text-teal-600 dark:text-teal-400 uppercase">Módulo 17</div>
+          <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-teal-600 transition-colors">HPP & Balão Bakri</div>
+        </a>
+        <a href="#modulo-18" class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-md transition-all group">
+          <div class="text-[10px] font-bold text-teal-600 dark:text-teal-400 uppercase">Módulo 18</div>
+          <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-teal-600 transition-colors">Puerpério & Lóquios</div>
+        </a>
+        <a href="#modulo-19" class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-md transition-all group">
+          <div class="text-[10px] font-bold text-teal-600 dark:text-teal-400 uppercase">Módulo 19</div>
+          <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-teal-600 transition-colors">Aleitamento & Pega</div>
+        </a>
+        <a href="#modulo-20" class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-md transition-all group">
+          <div class="text-[10px] font-bold text-teal-600 dark:text-teal-400 uppercase">Módulo 20</div>
+          <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-teal-600 transition-colors">Endometrite & TVP</div>
+        </a>
+        <a href="#simuladores-section" class="p-3 rounded-xl bg-teal-50 dark:bg-teal-950/40 border border-teal-200 dark:border-teal-800 hover:shadow-md transition-all group">
+          <div class="text-[10px] font-bold text-teal-700 dark:text-teal-300 uppercase">Ferramentas</div>
+          <div class="text-xs font-bold text-teal-900 dark:text-teal-100">4 Simuladores</div>
+        </a>
+        <a href="#flashcards-section" class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-md transition-all group">
+          <div class="text-[10px] font-bold text-teal-600 dark:text-teal-400 uppercase">Treino</div>
+          <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-teal-600 transition-colors">20 Flashcards 3D</div>
+        </a>
+        <a href="#quiz-section" class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-md transition-all group">
+          <div class="text-[10px] font-bold text-teal-600 dark:text-teal-400 uppercase">Exame</div>
+          <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-teal-600 transition-colors">Simulado USMLE</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+
+<!-- ==================== MÓDULO 12: TRABALHO DE PARTO ==================== -->
+    <section id="modulo-12" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Módulo 12</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Trabalho de Parto & Os 7 Movimentos Cardinais</h2>
+        </div>
+        <button data-speech-btn="modulo-12-content" onclick="speakSection('modulo-12-content')" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold flex items-center gap-1.5 transition-all text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-volume-high text-teal-600 dark:text-teal-400"></i> Ouvir Resumo
+        </button>
+      </div>
+
+      <div id="modulo-12-content" class="space-y-6">
+        <!-- Didactic Analogy Box -->
+        <div class="didactic-content p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50">
+          <div class="flex items-center gap-2 text-amber-800 dark:text-amber-300 text-xs font-bold uppercase tracking-wider mb-1">
+            <span>🎈</span> Didática para Criança de 5 Anos
+          </div>
+          <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+            O trabalho de parto é como <strong>abrir uma porta pesada com mola</strong>: o útero é a mola forte que empurra o bebê contra a porta (o colo). Cada contração empurra um pouquinho, e a portinha vai abrindo devagar. Quando a porta abre totalmente (10 centímetros), o bebê faz uma <strong>dancinha mágica</strong> girando a cabeça como uma chave na fechadura até achar o caminho para sair!
+          </p>
+        </div>
+
+        <!-- True vs False Labor Table -->
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-table-list text-teal-500"></i> Diagnóstico Diferencial: Trabalho de Parto Verdadeiro vs Falso (Braxton Hicks)
+          </h3>
+          <div class="table-responsive-container overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+            <table class="w-full text-left text-xs sm:text-sm min-w-[500px]">
+              <thead class="bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-bold border-b border-slate-200 dark:border-slate-800">
+                <tr>
+                  <th class="p-3 sm:p-4">Característica</th>
+                  <th class="p-3 sm:p-4 text-teal-600 dark:text-teal-400">Trabalho de Parto Verdadeiro</th>
+                  <th class="p-3 sm:p-4 text-slate-500">Falso Trabalho de Parto (Braxton Hicks)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/50">
+                  <td class="p-3 sm:p-4 font-bold">Regularidade das Contrações</td>
+                  <td class="p-3 sm:p-4 font-bold text-teal-600 dark:text-teal-400">Regulares, com intervalos decrescentes</td>
+                  <td class="p-3 sm:p-4">Irregulares, espaçadas sem padrão</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/50">
+                  <td class="p-3 sm:p-4 font-bold">Intensidade e Duração</td>
+                  <td class="p-3 sm:p-4 font-bold text-teal-600 dark:text-teal-400">Progressivamente mais intensas e duradouras</td>
+                  <td class="p-3 sm:p-4">Sem progressão de força ou duração</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/50">
+                  <td class="p-3 sm:p-4 font-bold">Irradiação da Dor</td>
+                  <td class="p-3 sm:p-4">Inicia no dorso e irradia para abdome anterior</td>
+                  <td class="p-3 sm:p-4">Restrita ao abdome anterior ou baixo ventre</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/50">
+                  <td class="p-3 sm:p-4 font-bold">Efeito da Deambulação / Repouso</td>
+                  <td class="p-3 sm:p-4">Mantém ou intensifica o padrão</td>
+                  <td class="p-3 sm:p-4">Alivia com deambulação, repouso ou banho morno</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/50">
+                  <td class="p-3 sm:p-4 font-bold">Modificação Cervical (Colo)</td>
+                  <td class="p-3 sm:p-4 font-black text-emerald-600 dark:text-emerald-400">SIM: Apagamento progressivo e dilatação</td>
+                  <td class="p-3 sm:p-4 text-rose-500 font-bold">NÃO: Colo grosso, posterior e fechado</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 4 Clinical Periods -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-bold uppercase text-teal-600 dark:text-teal-400 mb-1">1º Período</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Dilatação</div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
+              <strong>Fase Latente:</strong> 0 a 6 cm (lenta, até 20h em nulíparas).<br>
+              <strong>Fase Ativa:</strong> 6 a 10 cm (rápida, ≥ 1 cm/h segundo Zhang/ACOG).
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-bold uppercase text-cyan-600 dark:text-cyan-400 mb-1">2º Período</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Expulsivo</div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
+              Da dilatação total (10 cm) até o nascimento. Nulípara: até 3h (com peridural) ou 2h (sem). Puxos espontâneos (reflexo de Ferguson).
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-bold uppercase text-amber-600 dark:text-amber-400 mb-1">3º Período</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Dequitação</div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
+              Expulsão da placenta (até 30 min). <strong>Baudelocque-Schultze</strong> (75% - face fetal primeiro) vs <strong>Baudelocque-Duncan</strong> (25% - face materna).
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-bold uppercase text-rose-600 dark:text-rose-400 mb-1">4º Período</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Greenberg</div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
+              Primeira hora pós-parto. Maior risco de atonia e HPP. Vigilância do <strong>Globo de Segurança de Pinard</strong> e sinais vitais.
+            </p>
+          </div>
+        </div>
+
+        <!-- Medical Image 1: Mechanism of Labor -->
+        <div class="pt-6">
+          <div class="relative group cursor-pointer overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-900 img-fluid-container" onclick="openLightbox('assets/img/mecanismo_parto_movimentos.jpg', 'Mecanismo do Parto: Descida e Movimentos Cardinais', 'Painel anatômico em corte sagital da pelve feminina demonstrando a trajetória cefálica: Insinuação (planos -2 a 0), Rotação Interna para posição anterior (OEA/OP), Extensão sob a sínfise púbica e Desprendimento com rotação externa dos ombros.')">
+            <img src="assets/img/mecanismo_parto_movimentos.jpg" alt="Mecanismo do Parto e Movimentos Cardinais em Alta Resolução" class="fluid-img w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-300 max-w-full" width="1600" height="880" loading="lazy" style="aspect-ratio: 16/9;">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-4 text-xs text-slate-300">
+              <strong>Clique para ampliar em tela cheia:</strong> Os 7 movimentos cardinais do parto (Insinuação, Descida, Flexão, Rotação Interna, Extensão, Restituição e Expulsão).
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 Cardinal Movements Step by Step -->
+        <div class="p-5 rounded-2xl bg-slate-100/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+          <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-arrows-spin text-teal-500"></i> Sequência Rigorosa dos 7 Movimentos Cardinais (USMLE Mnemonic)
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="font-black text-teal-600 dark:text-teal-400">1. Insinuação (Encaixamento):</span> A maior circunferência da apresentação (diâmetro biparietal) ultrapassa o estreito superior da pelve (plano 0 de De Lee).
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="font-black text-teal-600 dark:text-teal-400">2. Descida:</span> Progressão contínua da apresentação pelo canal do parto sob a força das contrações e esforço expulsivo.
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="font-black text-teal-600 dark:text-teal-400">3. Flexão:</span> O queixo encosta na fúrcula esternal ao encontrar a resistência do assoalho pélvico, oferecendo o menor diâmetro: <strong>suboccipitobregmático (9,5 cm)</strong>.
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="font-black text-teal-600 dark:text-teal-400">4. Rotação Interna:</span> O occipício gira da posição transversa ou oblíqua para a posição anterior (púbica - OP), alinhando-se com o maior diâmetro do estreito inferior.
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="font-black text-teal-600 dark:text-teal-400">5. Extensão (Desflexão):</span> A cabeça emerge sob a sínfise púbica como uma alavanca (movimento de báscula), desprendendo o occipício, fronte, nariz e queixo.
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="font-black text-teal-600 dark:text-teal-400">6. Rotação Externa (Restituição):</span> A cabeça gira 45-90° para o mesmo lado em que estava insinuada, alinhando-se aos ombros fetais.
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 col-span-1 sm:col-span-2 md:col-span-3">
+              <span class="font-black text-teal-600 dark:text-teal-400">7. Expulsão:</span> Desprendimento do ombro anterior sob a sínfise púbica, seguido pelo ombro posterior sobre o períneo e liberação do restante do corpo.
+            </div>
+          </div>
+          <div class="mt-3 p-2.5 rounded-xl bg-teal-50 dark:bg-teal-950/40 border border-teal-200 dark:border-teal-800 text-teal-800 dark:text-teal-300 text-xs font-semibold">
+            ⭐ <strong>Mnemônico USMLE:</strong> "<strong>E</strong>very <strong>D</strong>ay <strong>F</strong>rank <strong>I</strong>nternally <strong>E</strong>xternally <strong>E</strong>xpels" &rarr; Engagement, Descent, Flexion, Internal rotation, Extension, External rotation, Expulsion.
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ==================== MÓDULO 13: PARTOGRAMA & SIMULADOR ==================== -->
+    <section id="modulo-13" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Módulo 13</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Partograma da OMS & Diagnóstico de Distocias</h2>
+        </div>
+        <button data-speech-btn="modulo-13-content" onclick="speakSection('modulo-13-content')" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold flex items-center gap-1.5 transition-all text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-volume-high text-teal-600 dark:text-teal-400"></i> Ouvir Resumo
+        </button>
+      </div>
+
+      <div id="modulo-13-content" class="space-y-6">
+        <!-- Didactic Analogy Box -->
+        <div class="didactic-content p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50">
+          <div class="flex items-center gap-2 text-amber-800 dark:text-amber-300 text-xs font-bold uppercase tracking-wider mb-1">
+            <span>🎈</span> Didática para Criança de 5 Anos
+          </div>
+          <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+            O partograma é como o <strong>mapa com velocímetro do parto</strong>. Ele tem duas linhas guias desenhadas na folha: a <strong>linha amarela (Alerta)</strong> e a <strong>linha vermelha (Ação)</strong>. Se o barquinho do bebê navegar devagar demais e bater na linha vermelha, o médico sabe que o parto "emperrou" e precisa intervir para ajudar o bebê a nascer logo e seguro!
+          </p>
+        </div>
+
+        <!-- Medical Image 2: Partograph -->
+        <div>
+          <div class="relative group cursor-pointer overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-900 img-fluid-container" onclick="openLightbox('assets/img/partograma_oms_curvas.jpg', 'Partograma da OMS: Registro Gráfico do Trabalho de Parto', 'Gráfico bidimensional relacionando o tempo de trabalho de parto no eixo X e a dilatação cervical (0-10 cm) no eixo Y. Destaca a Linha de Alerta (início em 6 cm com velocidade esperada de 1 cm/h), Linha de Ação (4 horas à direita), e registros simultâneos de dinâmica uterina, BCF e descida fetal.')">
+            <img src="assets/img/partograma_oms_curvas.jpg" alt="Partograma da OMS com Curvas e Linhas de Alerta e Ação" class="fluid-img w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-300 max-w-full" width="1600" height="915" loading="lazy" style="aspect-ratio: 16/9;">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-4 text-xs text-slate-300">
+              <strong>Clique para ampliar em tela cheia:</strong> Estrutura do Partograma da OMS com curvas de dilatação, descida fetal e linhas de alerta/ação.
+            </div>
+          </div>
+        </div>
+
+        <!-- INTERACTIVE PARTOGRAPH SIMULATOR -->
+        <div id="simulador-partograma" class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Simulador Clínico Interativo</span>
+              <h3 class="text-xl font-black text-slate-900 dark:text-white">Curvas de Partograma em Tempo Real</h3>
+            </div>
+            <!-- Scenario Selector Buttons -->
+            <div class="flex flex-wrap gap-2">
+              <button id="btn-scenario-normal" onclick="selectPartographScenario('normal')" class="scenario-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-teal-600 text-white shadow-md transition-all">
+                Parto Normal
+              </button>
+              <button id="btn-scenario-prolonged" onclick="selectPartographScenario('prolonged')" class="scenario-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 transition-all border border-slate-200 dark:border-slate-700">
+                Fase Ativa Prolongada
+              </button>
+              <button id="btn-scenario-arrest_dilation" onclick="selectPartographScenario('arrest_dilation')" class="scenario-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 transition-all border border-slate-200 dark:border-slate-700">
+                Parada de Dilatação
+              </button>
+              <button id="btn-scenario-arrest_descent" onclick="selectPartographScenario('arrest_descent')" class="scenario-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 transition-all border border-slate-200 dark:border-slate-700">
+                Parada de Descida
+              </button>
+            </div>
+          </div>
+
+          <!-- Canvas Container -->
+          <div class="relative w-full overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-2">
+            <canvas id="partograph-canvas" width="900" height="420" class="w-full h-auto block"></canvas>
+          </div>
+
+          <!-- Dynamic Diagnostic Output -->
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="text-xs uppercase font-bold text-slate-400">Diagnóstico Clínico:</span>
+              <span id="parto-diag-title" class="text-base font-black text-emerald-600 dark:text-emerald-400">Evolução Eutócica Fisiológica</span>
+            </div>
+            <p id="parto-diag-desc" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Início da fase ativa em 6 cm. Progressão rápida e constante a ≥ 1 cm/h, mantendo-se à esquerda da Linha de Alerta.
+            </p>
+            <div class="p-3 rounded-xl bg-teal-50 dark:bg-teal-950/40 border border-teal-200 dark:border-teal-800 text-xs text-teal-800 dark:text-teal-200">
+              <strong>Conduta Recomendada:</strong> <span id="parto-diag-action">Manter assistência humanizada de rotina, suporte contínuo e ausculta intermitente da FCF.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- USMLE Criteria for Arrest of Labor -->
+        <div class="p-5 rounded-2xl bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-900/50">
+          <h4 class="text-sm font-bold text-rose-800 dark:text-rose-300 mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-triangle-exclamation text-rose-500"></i> Critérios Rígidos de Parada de Progressão (ACOG / USMLE Gold Standard)
+          </h4>
+          <p class="text-xs sm:text-sm text-rose-900 dark:text-rose-200 leading-relaxed mb-3">
+            Para fechar diagnóstico de <strong>falha de progressão da fase ativa (indicação de cesárea)</strong>, é obrigatório preencher <strong>TODOS</strong> os seguintes requisitos prévios:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-900 font-medium">
+              1. Dilatação cervical mínima de <strong>≥ 6 cm</strong> (início verdadeiro da fase ativa).
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-900 font-medium">
+              2. <strong>Bolsa rota</strong> (membranas amnióticas rotas espontânea ou artificialmente).
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-900 font-medium">
+              3. Sem progressão por <strong>≥ 4 horas com contrações adequadas (≥ 200 MVU)</strong> OU <strong>≥ 6 horas com contrações inadequadas com ocitocina</strong>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ==================== MÓDULO 16: DISTÓCIAS & SIMULADOR HELPERR ==================== -->
+    <section id="distocia-ombros" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">Módulo 16 · Emergência Obstétrica</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Distócia de Ombros & O Algoritmo HELPERR</h2>
+        </div>
+        <button data-speech-btn="distocia-content" onclick="speakSection('distocia-content')" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold flex items-center gap-1.5 transition-all text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-volume-high text-teal-600 dark:text-teal-400"></i> Ouvir Resumo
+        </button>
+      </div>
+
+      <div id="distocia-content" class="space-y-6">
+        <!-- Didactic Analogy Box -->
+        <div class="didactic-content p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50">
+          <div class="flex items-center gap-2 text-amber-800 dark:text-amber-300 text-xs font-bold uppercase tracking-wider mb-1">
+            <span>🎈</span> Didática para Criança de 5 Anos
+          </div>
+          <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+            A distócia de ombros é como tentar <strong>tirar uma rolha gordinha de dentro de uma garrafa</strong>: a pontinha saiu (a cabeça do bebê), mas os bracinhos ficaram travados atrás do osso duro da mamãe (sínfise púbica). O médico não pode puxar a cabeça com força para não machucar o pescocinho! Em vez disso, dobra as pernas da mamãe bem para cima (McRoberts) e aperta em cima do osso para destravar o ombrinho!
+          </p>
+        </div>
+
+        <!-- Medical Image 3: Shoulder Dystocia -->
+        <div>
+          <div class="relative group cursor-pointer overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-900 img-fluid-container" onclick="openLightbox('assets/img/distocia_ombros_mcroberts.jpg', 'Emergência Obstétrica: Distócia de Ombros e Manobras de McRoberts e Rubin', 'Ilustração médica em corte sagital mostrando o impacto do ombro anterior fetal atrás da sínfise púbica materna (Sinal da Tartaruga) e a execução da manobra de McRoberts com hiperflexão das coxas maternas associada à pressão suprapúbica (Rubin I).')">
+            <img src="assets/img/distocia_ombros_mcroberts.jpg" alt="Distócia de Ombros e Manobra de McRoberts em Alta Resolução" class="fluid-img w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-300 max-w-full" width="1376" height="768" loading="lazy" style="aspect-ratio: 16/9;">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-4 text-xs text-slate-300">
+              <strong>Clique para ampliar em tela cheia:</strong> Anatomia da distócia de ombros, sinal da tartaruga e desimpactação com McRoberts + Rubin I.
+            </div>
+          </div>
+        </div>
+
+        <!-- HELPERR INTERACTIVE TRAINER -->
+        <div class="p-6 rounded-3xl bg-slate-900 text-white shadow-xl space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-400">Treinador de Emergência com Cronômetro</span>
+              <h3 class="text-xl font-black text-white">Algoritmo Mnemônico HELPERR</h3>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-2xl font-mono font-black text-rose-400 bg-slate-950 px-4 py-1.5 rounded-xl border border-slate-800 shadow-inner" id="helperr-clock">00:00</div>
+              <button id="helperr-start-btn" onclick="toggleHelperrTimer()" class="px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs flex items-center gap-2 transition-all shadow-md">
+                <i class="fa-solid fa-play"></i> Iniciar Cronômetro
+              </button>
+            </div>
+          </div>
+
+          <div id="helperr-time-alert" class="p-3 rounded-xl bg-teal-950/50 text-teal-300 border border-teal-800 text-xs font-semibold">
+            Tempo decorrido: O objetivo é a desimpactação segura em até 2 a 3 minutos para evitar encefalopatia anóxica e acidose fetal grave.
+          </div>
+
+          <!-- 7 Steps of HELPERR -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+              <div class="flex items-center gap-2 font-black text-rose-400 text-sm mb-1">
+                <span>H</span> Help (Ajuda Imediata)
+              </div>
+              <p class="text-slate-300">Chamar neonatologista, anestesista, equipe de enfermagem obstétrica e solicitar materiais cirúrgicos adicionais.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+              <div class="flex items-center gap-2 font-black text-amber-400 text-sm mb-1">
+                <span>E</span> Evaluate for Episiotomy
+              </div>
+              <p class="text-slate-300">Avaliar necessidade de episiotomia ampla para dar espaço às manobras manuais internas (não resolve a distocia óssea).</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-teal-500 shadow-md shadow-teal-500/10">
+              <div class="flex items-center gap-2 font-black text-teal-400 text-sm mb-1">
+                <span>L</span> Legs (Manobra de McRoberts)
+              </div>
+              <p class="text-slate-300 font-medium"><strong>1ª Manobra Obrigatória:</strong> Hiperflexão e abdução das coxas maternas contra o abdome. Retifica a curvatura sacral e alarga a pelve.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-teal-500 shadow-md shadow-teal-500/10">
+              <div class="flex items-center gap-2 font-black text-teal-400 text-sm mb-1">
+                <span>P</span> Pressure (Pressão Suprapúbica)
+              </div>
+              <p class="text-slate-300 font-medium"><strong>Manobra de Rubin I:</strong> Pressão no dorso do ombro anterior em sentido oblíquo para desimpactá-lo da sínfise. <strong>NUNCA fúndica!</strong></p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+              <div class="flex items-center gap-2 font-black text-cyan-400 text-sm mb-1">
+                <span>E</span> Enter (Manobras Internas)
+              </div>
+              <p class="text-slate-300"><strong>Rubin II</strong> (pressão na face posterior do ombro anterior) ou <strong>Woods Screw</strong> (rotação do ombro posterior em saca-rolhas por 180°).</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+              <div class="flex items-center gap-2 font-black text-indigo-400 text-sm mb-1">
+                <span>R</span> Remove Posterior Arm
+              </div>
+              <p class="text-slate-300">Flexionar o cotovelo e capturar a mão fetal, tracionando o braço posterior sobre o tórax fetal para fora da vagina.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 col-span-1 sm:col-span-2 lg:col-span-3">
+              <div class="flex items-center gap-2 font-black text-purple-400 text-sm mb-1">
+                <span>R</span> Roll (Manobra de Gaskin)
+              </div>
+              <p class="text-slate-300">Colocar a paciente em posição de quatro apoios (mãos e joelhos). A gravidade e a mudança nos diâmetros conjugados frequentemente desimpactam o ombro posterior.</p>
+            </div>
+          </div>
+
+          <!-- Forbidden Maneuvers -->
+          <div class="p-4 rounded-2xl bg-rose-950/40 border border-rose-800 text-rose-200 text-xs">
+            <h5 class="font-bold text-rose-300 mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-ban text-rose-500"></i> Manobras Proibidas e Fatais na Distócia de Ombros:
+            </h5>
+            <ul class="list-disc list-inside space-y-1 text-slate-300">
+              <li><strong>Manobra de Kristeller (Pressão no Fundo Uterino):</strong> Formalmente proibida! Aumenta a impactação do ombro contra o púbis e causa rotura uterina e descolamento de placenta.</li>
+              <li><strong>Tração excessiva na cabeça ou torção cervical:</strong> Causa estiramento do plexo braquial com paralisia permanente de <strong>Erb-Duchenne (C5-C6 - 'garçom pedindo gorjeta')</strong> ou Klumpke (C8-T1).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ==================== MÓDULO 17: HPP, 4 T's & BALÃO DE BAKRI ==================== -->
+    <section id="modulo-17" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">Módulo 17 · Emergência Materna</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Hemorragia Pós-Parto (HPP) & O Algoritmo dos 4 T's</h2>
+        </div>
+        <button data-speech-btn="hpp-content" onclick="speakSection('hpp-content')" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold flex items-center gap-1.5 transition-all text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-volume-high text-teal-600 dark:text-teal-400"></i> Ouvir Resumo
+        </button>
+      </div>
+
+      <div id="hpp-content" class="space-y-6">
+        <!-- Didactic Analogy Box -->
+        <div class="didactic-content p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50">
+          <div class="flex items-center gap-2 text-amber-800 dark:text-amber-300 text-xs font-bold uppercase tracking-wider mb-1">
+            <span>🎈</span> Didática para Criança de 5 Anos
+          </div>
+          <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+            Depois que o bebê nasce, o útero precisa <strong>apertar como um punho bem fechado</strong> para fechar as torneirinhas de sangue onde a placenta estava colada. Se o útero ficar cansado e mole como uma massinha (atonia), o sangue vaza sem parar. Para salvar a mamãe, a gente dá remédios que fazem o útero ficar durinho de novo e coloca uma bexiguinha de água lá dentro (o Balão de Bakri) para tampar o sangramento por dentro!
+          </p>
+        </div>
+
+        <!-- The 4 T's Summary Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-bold uppercase text-rose-600 dark:text-rose-400">1. Tônus (70%)</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Atonia Uterina</div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Causa nº 1 no mundo. Útero amolecido, sem globo de Pinard pós-sobredistensão ou parto prolongado.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-bold uppercase text-amber-600 dark:text-amber-400">2. Trauma (20%)</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Lacerações & Hematomas</div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Laceração de colo, vagina, períneo 3º/4º grau, rotura uterina e inversão uterina aguda.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-bold uppercase text-cyan-600 dark:text-cyan-400">3. Tecido (9%)</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Restos & Acretismo</div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Cotilédones placentários retidos, coágulos intracavitários ou espectro do acretismo placentário.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-bold uppercase text-purple-600 dark:text-purple-400">4. Trombina (1%)</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Coagulopatias & CIVD</div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">CIVD secundária a DPP, embolia amniótica, HELLP syndrome, sepse ou uso de anticoagulantes.</p>
+          </div>
+        </div>
+
+        <!-- Medical Image 4: PPH & Bakri Balloon -->
+        <div>
+          <div class="relative group cursor-pointer overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-900 img-fluid-container" onclick="openLightbox('assets/img/hemorragia_pos_parto_balao_bakri.jpg', 'Manejo da Hemorragia Pós-Parto (HPP): Balão de Tamponamento Intrauterino (Bakri)', 'Visão anatômica do útero pós-parto atônico preenchido pelo Balão de Bakri insuflado com 300 a 500 mL de solução salina. A pressão hidrostática comprime os vasos miometriais abertos contra a parede uterina, enquanto a porta de drenagem monitora o débito contínuo de sangramento.')">
+            <img src="assets/img/hemorragia_pos_parto_balao_bakri.jpg" alt="Manejo da Hemorragia Pós-Parto e Balão de Bakri em Alta Resolução" class="fluid-img w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-300 max-w-full" width="1376" height="768" loading="lazy" style="aspect-ratio: 16/9;">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-4 text-xs text-slate-300">
+              <strong>Clique para ampliar em tela cheia:</strong> Mecanismo do Balão de Bakri, tamponamento miometrial e saída de drenagem coletora.
+            </div>
+          </div>
+        </div>
+
+        <!-- INTERACTIVE HPP & SHOCK INDEX CALCULATOR -->
+        <div id="calculadora-hpp" class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">Ferramenta Interativa de Emergência</span>
+              <h3 class="text-xl font-black text-slate-900 dark:text-white">Calculadora do Índice de Choque Obstétrico & Conduta</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-slate-500">Índice de Choque (FC/PAS):</span>
+              <span id="shock-index-val" class="text-2xl font-mono font-black text-rose-600 dark:text-rose-400">0.67</span>
+            </div>
+          </div>
+
+          <!-- Input Fields -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-500 dark:text-slate-400 mb-1">Perda Estimada (mL)</label>
+              <input type="number" id="hpp-loss-input" value="600" step="50" oninput="calculateHPP()" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-rose-500">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-500 dark:text-slate-400 mb-1">Frequência Cardíaca (bpm)</label>
+              <input type="number" id="hpp-hr-input" value="80" step="1" oninput="calculateHPP()" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-rose-500">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-500 dark:text-slate-400 mb-1">PA Sistólica (mmHg)</label>
+              <input type="number" id="hpp-sbp-input" value="120" step="1" oninput="calculateHPP()" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-rose-500">
+            </div>
+          </div>
+
+          <!-- Comorbidity Check -->
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50">
+            <input type="checkbox" id="has-hypertension-check" onchange="calculateHPP()" class="w-4 h-4 text-rose-600 rounded focus:ring-rose-500">
+            <label for="has-hypertension-check" class="text-xs font-bold text-amber-900 dark:text-amber-200 cursor-pointer">
+              Paciente com Hipertensão Prévia ou Pré-eclâmpsia (Ativa verificação de contraindicação de alcaloides do ergot)
+            </label>
+          </div>
+
+          <!-- Dynamic Output Card -->
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs uppercase font-bold text-slate-400">Classificação Hemodinâmica:</span>
+              <span id="shock-index-badge" class="text-xs px-2.5 py-1 rounded-full font-bold bg-yellow-100 text-yellow-800">HPP Leve a Moderada</span>
+            </div>
+            <!-- Progress Gauge -->
+            <div class="w-full h-2.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+              <div id="shock-index-bar" class="h-full bg-yellow-500 rounded-full transition-all duration-300" style="width: 50%"></div>
+            </div>
+            <!-- Action Needed -->
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300">
+              <strong>Conduta Imediata:</strong> <span id="hpp-action-alert">Iniciar protocolo de 1ª linha: Ocitocina IV em infusão rápida, esvaziamento vesical e massagem uterina contínua.</span>
+            </div>
+            <!-- Ergometrine Alert (Conditional) -->
+            <div id="ergometrine-contraindicated-alert" class="hidden p-3 rounded-xl bg-rose-600 text-white font-bold text-xs flex items-center gap-2">
+              <i class="fa-solid fa-triangle-exclamation text-base"></i>
+              <span>ALERTA CRÍTICO: METILERGOMETRINA FORMALMENTE CONTRAINDICADA! Paciente hipertensa apresenta risco severo de crise hipertensiva aguda e AVC. Usar Misoprostol ou Ácido Tranexâmico!</span>
+            </div>
+          </div>
+
+          <!-- Stepped Uterotonic Algorithm -->
+          <div class="pt-2">
+            <h4 class="text-xs font-bold uppercase text-slate-500 mb-2">Escada Terapêutica Escalonada de Uterotônicos</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 text-xs">
+              <div class="p-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200">
+                <strong>1ª Linha: Ocitocina</strong><br>20-40 UI em 1000 mL SF IV contínuo.
+              </div>
+              <div class="p-2.5 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-200">
+                <strong>2ª Linha: Metilergometrina</strong><br>0,2 mg IM (se normotensa).
+              </div>
+              <div class="p-2.5 rounded-xl bg-cyan-50 dark:bg-cyan-950/40 border border-cyan-200 dark:border-cyan-800 text-cyan-800 dark:text-cyan-200">
+                <strong>3ª Linha: Misoprostol</strong><br>800 &mu;g retal ou sublingual.
+              </div>
+              <div class="p-2.5 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 text-rose-800 dark:text-rose-200">
+                <strong>Ácido Tranexâmico</strong><br>1g IV em ≤ 3h (WOMAN trial).
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ==================== MÓDULO 18: PUERPÉRIO FISIOLÓGICO & LÓQUIOS ==================== -->
+    <section id="modulo-18" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Módulo 18</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Puerpério Fisiológico, Involução & Lóquios</h2>
+        </div>
+        <button data-speech-btn="puerperio-content" onclick="speakSection('puerperio-content')" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold flex items-center gap-1.5 transition-all text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-volume-high text-teal-600 dark:text-teal-400"></i> Ouvir Resumo
+        </button>
+      </div>
+
+      <div id="puerperio-content" class="space-y-6">
+        <!-- Didactic Analogy Box -->
+        <div class="didactic-content p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50">
+          <div class="flex items-center gap-2 text-amber-800 dark:text-amber-300 text-xs font-bold uppercase tracking-wider mb-1">
+            <span>🎈</span> Didática para Criança de 5 Anos
+          </div>
+          <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+            Depois que o bebê nasce, o corpo da mamãe começa a <strong>arrumar a casinha</strong>. O útero que estava gigante vai encolhendo dia após dia até caber de volta dentro da bacia. A sujeirinha que sai vai mudando de cor: primeiro vermelha como groselha (lóquios rubros), depois cor-de-rosa clarinho (serosos) e por fim branquinha como leite de coco (albos).
+          </p>
+        </div>
+
+        <!-- Medical Image 5: Uterine Involution & Lochia -->
+        <div>
+          <div class="relative group cursor-pointer overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-900 img-fluid-container" onclick="openLightbox('assets/img/involucao_uterina_loquios.jpg', 'Involução Uterina e Evolução dos Lóquios no Puerpério', 'Painel comparativo ilustrando a regressão diária da altura uterina (Dia 0 na cicatriz umbilical, Dia 7 a meio caminho do púbis, Dia 10-14 intrapélvico e 6ª semana com retorno ao tamanho pré-gravídico) e a diferenciação visual e cromática dos lóquios rubros, serosos e albos.')">
+            <img src="assets/img/involucao_uterina_loquios.jpg" alt="Involução Uterina e Evolução dos Lóquios em Alta Resolução" class="fluid-img w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-300 max-w-full" width="1376" height="768" loading="lazy" style="aspect-ratio: 16/9;">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-4 text-xs text-slate-300">
+              <strong>Clique para ampliar em tela cheia:</strong> Linha do tempo da altura uterina e os 3 estágios dos lóquios fisiológicos.
+            </div>
+          </div>
+        </div>
+
+        <!-- Lochia Summary Table -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-4 rounded-2xl bg-rose-50 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/60">
+            <div class="text-xs font-bold uppercase text-rose-600 dark:text-rose-400">1º ao 3º Dia</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Lóquios Rubros</div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Vermelho-vivo com pequenos coágulos. Composto por sangue, restos deciduais e vernix esfoliado. Odor característico suave (não fétido).</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/60">
+            <div class="text-xs font-bold uppercase text-amber-600 dark:text-amber-400">4º ao 10º Dia</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Lóquios Serosos</div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Coloração rosada a acastanhada. Redução acentuada de hemácias, aumento de exsudato seroso, leucócitos e muco cervical.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/60">
+            <div class="text-xs font-bold uppercase text-emerald-600 dark:text-emerald-400">11º ao 42º Dia</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Lóquios Albos</div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Coloração esbranquiçada a amarelada. Predomínio de leucócitos, células epiteliais, colesterol e muco até a cicatrização endometrial completa.</p>
+          </div>
+        </div>
+
+        <!-- Contraception in Puerperium -->
+        <div class="p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-xs">
+          <h4 class="font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-pills text-teal-500"></i> Regras de Ouro da Contracepção no Puerpério:
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-600 dark:text-slate-300">
+            <div>
+              <strong>Métodos Progestagênicos ou DIU:</strong> Minipílula (desogestrel), implante de etonogestrel e DIU (cobre ou levonorgestrel) podem ser iniciados no pós-parto imediato ou com 6 semanas, sem interferir no aleitamento.
+            </div>
+            <div class="text-rose-600 dark:text-rose-400 font-medium">
+              <strong>Anticoncepcional Combinado Oral (ACO):</strong> Formalmente CONTRAINDICADO antes de 6 semanas pós-parto (ou 6 meses se em amamentação exclusiva) pelo risco acentuado de Trombose Venosa Profunda (TVP) e inibição da produção láctea.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ==================== MÓDULO 19: ALEITAMENTO MATERNO ==================== -->
+    <section id="modulo-19" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Módulo 19</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Aleitamento Materno: Neuroendocrinologia & Pega Correta</h2>
+        </div>
+        <button data-speech-btn="amamentacao-content" onclick="speakSection('amamentacao-content')" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold flex items-center gap-1.5 transition-all text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-volume-high text-teal-600 dark:text-teal-400"></i> Ouvir Resumo
+        </button>
+      </div>
+
+      <div id="amamentacao-content" class="space-y-6">
+        <!-- Didactic Analogy Box -->
+        <div class="didactic-content p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50">
+          <div class="flex items-center gap-2 text-amber-800 dark:text-amber-300 text-xs font-bold uppercase tracking-wider mb-1">
+            <span>🎈</span> Didática para Criança de 5 Anos
+          </div>
+          <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+            Na fábrica do leite da mamãe trabalham dois ajudantes: a <strong>Prolactina</strong> é a cozinheira que faz o leite delicioso dentro das panelinhas (alvéolos). A <strong>Ocitocina</strong> é o garçom que aperta as panelinhas para espirrar o leite na boquinha do bebê! E para o bebê mamar sem dor na mamãe, ele precisa abrir a boca bem grandona como um peixinho e abocanhar a rodela escura toda (a aréola), e não só a pontinha!
+          </p>
+        </div>
+
+        <!-- Medical Image 6: Breastfeeding Latch & Hormones -->
+        <div>
+          <div class="relative group cursor-pointer overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-900 img-fluid-container" onclick="openLightbox('assets/img/amamentacao_neuroendocrinologia_pega.jpg', 'Anatomia Materna, Neuroendocrinologia da Lactação e Técnica da Pega Correta', 'Painel duplo em alta resolução: à esquerda, o eixo neuroendócrino com a prolactina estimulando a síntese de leite nos alvéolos e a ocitocina contraindo as células mioepiteliais na ejeção; à direita, a técnica da pega correta com ângulo labial > 120°, lábio inferior evertido em peixinho, queixo encostado na mama e nariz livre.')">
+            <img src="assets/img/amamentacao_neuroendocrinologia_pega.jpg" alt="Neuroendocrinologia da Lactação e Pega Correta em Alta Resolução" class="fluid-img w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-300 max-w-full" width="1376" height="768" loading="lazy" style="aspect-ratio: 16/9;">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-4 text-xs text-slate-300">
+              <strong>Clique para ampliar em tela cheia:</strong> Fisiologia hormonal (Prolactina vs Ocitocina) e os critérios anatômicos da pega correta.
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Latch Criteria & Mastitis Pearls -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+            <h4 class="font-bold text-teal-600 dark:text-teal-400 text-sm flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-emerald-500"></i> Critérios da Pega Correta (Sem Dor):
+            </h4>
+            <ul class="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-300">
+              <li><strong>Boca bem aberta:</strong> Ângulo de abertura superior a 120°.</li>
+              <li><strong>Lábios evertidos:</strong> Lábio inferior voltado para fora ("boca de peixe").</li>
+              <li><strong>Pega assimétrica:</strong> Mais aréola visível acima do lábio superior do que abaixo.</li>
+              <li><strong>Queixo tocando a mama:</strong> Contato firme sem obstruir as narinas do recém-nascido.</li>
+              <li><strong>Bochechas arredondadas:</strong> Sem covinhas ou estalos durante a sucção.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-rose-50 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/60 space-y-2">
+            <h4 class="font-bold text-rose-600 dark:text-rose-400 text-sm flex items-center gap-2">
+              <i class="fa-solid fa-shield-virus text-rose-500"></i> Manejo da Mastite Puerperal:
+            </h4>
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+              Infecção aguda por <em>Staphylococcus aureus</em>. Quadro de febre, calafrios, eritema em cunha doloroso e ingurgitamento mamário.
+            </p>
+            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-rose-300 dark:border-rose-800 text-rose-800 dark:text-rose-300 font-bold">
+              ⭐ REGRA DE OURO USMLE: NÃO SUSPENDER A AMAMENTAÇÃO! Manter o esvaziamento mamário através das mamadas e ordenha, associado a antibióticos (Cefalexina / Dicloxacilina) e analgesia.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ==================== MÓDULO 20: COMPLICAÇÕES & ESCALA DE EDINBURGH ==================== -->
+    <section id="modulo-20" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">Módulo 20</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Complicações Puerperais & Saúde Mental (EPDS)</h2>
+        </div>
+        <button data-speech-btn="complicacoes-content" onclick="speakSection('complicacoes-content')" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold flex items-center gap-1.5 transition-all text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-volume-high text-teal-600 dark:text-teal-400"></i> Ouvir Resumo
+        </button>
+      </div>
+
+      <div id="complicacoes-content" class="space-y-6">
+        <!-- Endometritis & Sheehan Summary Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+            <div class="text-xs font-bold uppercase text-rose-600 dark:text-rose-400">Infecção Puerperal Mais Comum</div>
+            <h4 class="text-base font-black text-slate-900 dark:text-white">Endometrite Pós-Cesárea</h4>
+            <p class="text-slate-600 dark:text-slate-300">
+              Febre ≥ 38°C a partir de 24h pós-parto, dor à palpação do corpo uterino, útero subinvoluído e lóquios purulentos/fétidos. Cesárea é o fator de risco isolado mais potente.
+            </p>
+            <div class="p-2.5 rounded-xl bg-teal-50 dark:bg-teal-950/40 border border-teal-200 dark:border-teal-800 font-bold text-teal-800 dark:text-teal-300">
+              Tratamento Ouro: Clindamicina 900 mg IV 8/8h + Gentamicina 5 mg/kg/dia IV em dose única diária.
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+            <div class="text-xs font-bold uppercase text-amber-600 dark:text-amber-400">Necrose Hipofisária Isquêmica</div>
+            <h4 class="text-base font-black text-slate-900 dark:text-white">Síndrome de Sheehan</h4>
+            <p class="text-slate-600 dark:text-slate-300">
+              Consequência tardia de choque hipovolêmico grave por hemorragia pós-parto maciça. Necrose da adeno-hipófise levando a pan-hipopituitarismo crônico.
+            </p>
+            <div class="p-2.5 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 font-bold text-amber-800 dark:text-amber-300">
+              Sinal Precoce Patognomônico: Agalactia (ausência de apojadura/produção de leite) + amenorreia secundária permanente.
+            </div>
+          </div>
+        </div>
+
+        <!-- INTERACTIVE EDINBURGH DEPRESSION SCALE (EPDS) -->
+        <div id="calculadora-epds" class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Instrumento de Rastreio Rápido</span>
+              <h3 class="text-xl font-black text-slate-900 dark:text-white">Escala de Depressão Pós-Parto de Edimburgo (EPDS)</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-slate-500">Escore Total (0-30):</span>
+              <span id="epds-score-val" class="text-2xl font-mono font-black text-teal-600 dark:text-teal-400">0</span>
+            </div>
+          </div>
+
+          <!-- Sample Key Questions -->
+          <div class="space-y-4 text-xs">
+            <div>
+              <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">1. Fui capaz de rir e ver o lado divertido das coisas:</label>
+              <select class="epds-select w-full p-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white" onchange="calculateEPDS()">
+                <option value="0">Tanto quanto sempre pude (0 pontos)</option>
+                <option value="1">Não tanto agora (1 ponto)</option>
+                <option value="2">Definitivamente menos agora (2 pontos)</option>
+                <option value="3">De modo nenhum (3 pontos)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">2. Olhei para o futuro com prazer e esperança:</label>
+              <select class="epds-select w-full p-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white" onchange="calculateEPDS()">
+                <option value="0">Tanto quanto sempre fiz (0 pontos)</option>
+                <option value="1">Um pouco menos do que costumava (1 ponto)</option>
+                <option value="2">Definitivamente menos do que costumava (2 pontos)</option>
+                <option value="3">Quase nunca (3 pontos)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">3. Senti-me tão triste que tive dificuldade para dormir:</label>
+              <select class="epds-select w-full p-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white" onchange="calculateEPDS()">
+                <option value="0">Nunca ou raramente (0 pontos)</option>
+                <option value="1">Não muito frequentemente (1 ponto)</option>
+                <option value="2">Sim, algumas vezes (2 pontos)</option>
+                <option value="3">Sim, na maior parte do tempo (3 pontos)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-bold text-rose-600 dark:text-rose-400 mb-1">4. O pensamento de fazer mal a mim mesma ocorreu-me:</label>
+              <select id="epds-self-harm" class="epds-select w-full p-2 rounded-xl border border-rose-300 dark:border-rose-700 bg-rose-50/50 dark:bg-rose-950/30 text-rose-900 dark:text-rose-200 font-bold" onchange="calculateEPDS()">
+                <option value="0">Nunca (0 pontos)</option>
+                <option value="1">Raramente (1 ponto)</option>
+                <option value="2">Algumas vezes (2 pontos)</option>
+                <option value="3">Sim, com frequência (3 pontos)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Dynamic Result Box -->
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs uppercase font-bold text-slate-400">Classificação:</span>
+              <span id="epds-badge" class="text-xs px-2.5 py-1 rounded-full font-bold bg-emerald-100 text-emerald-800">Baixo Risco (Score &lt; 10)</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300">
+              <strong>Conduta Recomendada:</strong> <span id="epds-action">Sintomatologia depressiva improvável. Reassegurar apoio familiar habitual e consulta de rotina pós-parto.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ==================== FLASHCARDS 3D INTERATIVOS ==================== -->
+    <section id="flashcards-section" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Treinamento Ativo & Repetição Espaçada</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">20 Flashcards Interativos 3D</h2>
+        </div>
+        <div class="text-xs text-slate-400 font-medium hidden sm:block">Clique no card para girar</div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <!-- Flashcard 1 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 1 · Mecanismo</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual é o menor diâmetro cefálico apresentado na atitude fletida de vértice?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>Diâmetro Suboccipitobregmático</strong>, medindo aproximadamente <strong>9,5 cm</strong> (ponto de referência: Lambda / fontanela posterior).</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 2 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 2 · Partograma</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual é a definição atual de início da fase ativa do trabalho de parto segundo a OMS e o ACOG?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>6 cm de dilatação</strong> cervical (critério de Zhang, 2010; substituiu a antiga definição de 4 cm de Friedman).</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 3 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 3 · Distócias</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual é a PRIMEIRA manobra a ser realizada no diagnóstico de Distócia de Ombros?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>Manobra de McRoberts</strong> (hiperflexão das coxas maternas contra o abdome), associada à pressão suprapúbica (Rubin I).</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 4 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 4 · HPP</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual uterotônico é formalmente CONTRAINDICADO em pacientes com hipertensão ou pré-eclâmpsia?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>Metilergometrina (Ergot)</strong>, pelo risco severo de vasoconstrição periférica súbita, pico hipertensivo e AVC.</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 5 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 5 · Aleitamento</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual hormônio é responsável pela PRODUÇÃO láctea e qual é responsável pela EJEÇÃO do leite?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>Prolactina</strong> (adeno-hipófise) produz o leite nos alvéolos; <strong>Ocitocina</strong> (neuro-hipófise) contrai as células mioepiteliais e ejeta o leite.</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 6 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 6 · Endometrite</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual é o esquema antibiótico parenteral de primeira escolha para Endometrite Pós-Cesárea?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>Clindamicina 900 mg IV de 8/8h + Gentamicina 5 mg/kg/dia IV</strong> em dose única diária (esquema padrão ouro).</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 7 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 7 · Anestesia</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual é o tratamento definitivo e padrão ouro para cefaleia pós-punção dural refratária?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>Tampão Sanguíneo Peridural (Epidural Blood Patch)</strong>: injeção de 15 a 20 mL de sangue autólogo no espaço peridural para selar a fístula liquórica.</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 8 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 8 · Saúde Mental</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual é a diferença temporal e clínica entre Baby Blues e Depressão Pós-Parto?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>Baby Blues:</strong> autolimitado, dura até 14 dias (choro fácil e labilidade). <strong>Depressão:</strong> persiste > 2 semanas, tristeza profunda, anedonia e culpa (exige psicoterapia/ISRS).</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ==================== SIMULADO USMLE STEP 2 CK / STEP 3 ==================== -->
+    <section id="quiz-section" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Avaliação Clínica Interativa</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Simulado USMLE Step 2 CK / Step 3</h2>
+        </div>
+        <div id="quiz-score-display" class="px-3 py-1.5 rounded-xl bg-teal-50 dark:bg-teal-950/40 text-teal-700 dark:text-teal-300 font-bold text-xs border border-teal-200 dark:border-teal-800">
+          0 de 0 respondidas
+        </div>
+      </div>
+
+      <!-- Question 1 -->
+      <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4 mb-6">
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span>Questão 1 · Distócia de Ombros</span>
+          <span class="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 font-mono">Step 2 CK</span>
+        </div>
+        <p class="text-sm font-semibold text-slate-900 dark:text-white leading-relaxed">
+          Uma primigesta de 31 anos, com diabetes gestacional compensado na dieta, encontra-se no período expulsivo. Após esforço materno vigoroso, a cabeça fetal é desprendida, porém retrai-se firmemente de volta contra o períneo materno (sinal da tartaruga). A tração suave para baixo não obtém sucesso no desprendimento do ombro anterior. Qual é a conduta imediata mais indicada?
+        </p>
+        <div class="space-y-2">
+          <button data-quiz-q="q1" data-quiz-opt="a" onclick="selectQuizOption('q1', 'a')" class="w-full text-left p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 text-xs text-slate-700 dark:text-slate-300 transition-all">
+            (A) Aplicar pressão firme no fundo uterino para empurrar o feto (manobra de Kristeller)
+          </button>
+          <button data-quiz-q="q1" data-quiz-opt="b" onclick="selectQuizOption('q1', 'b')" class="w-full text-left p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 text-xs text-slate-700 dark:text-slate-300 transition-all">
+            (B) Aplicar tração lateral enérgica na cabeça fetal para vencer a resistência óssea
+          </button>
+          <button data-quiz-q="q1" data-quiz-opt="c" onclick="selectQuizOption('q1', 'c')" class="w-full text-left p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 text-xs text-slate-700 dark:text-slate-300 transition-all">
+            (C) Hiperflexionar as coxas da paciente sobre o abdome materno (manobra de McRoberts) associada à pressão suprapúbica
+          </button>
+          <button data-quiz-q="q1" data-quiz-opt="d" onclick="selectQuizOption('q1', 'd')" class="w-full text-left p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 text-xs text-slate-700 dark:text-slate-300 transition-all">
+            (D) Realizar cesariana de emergência sem tentar manobras adicionais
+          </button>
+        </div>
+        <div id="q1-feedback" class="text-xs"></div>
+        <div class="hidden p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300">
+          <strong>Comentário USMLE:</strong> <span id="q1-explanation"></span>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4 mb-6">
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span>Questão 2 · Partograma e Parada de Progressão</span>
+          <span class="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 font-mono">Step 2 CK / Step 3</span>
+        </div>
+        <p class="text-sm font-semibold text-slate-900 dark:text-white leading-relaxed">
+          Uma primípara de 24 anos com 39 semanas encontra-se em trabalho de parto ativo. Há 4 horas seu exame cervical revelava 7 cm de dilatação, bolsa rota e 4 contrações em 10 minutos com intensidade forte. Um cateter de pressão intrauterina documentou 220 Unidades Montevideo de contrações durante as últimas 4 horas. O exame atual revela persistência dos mesmos 7 cm de dilatação e apresentação fetal no plano 0 de De Lee. A frequência cardíaca fetal é de 140 bpm, categoria 1. Qual é o próximo passo mais adequado?
+        </p>
+        <div class="space-y-2">
+          <button data-quiz-q="q2" data-quiz-opt="a" onclick="selectQuizOption('q2', 'a')" class="w-full text-left p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 text-xs text-slate-700 dark:text-slate-300 transition-all">
+            (A) Iniciar infusão de ocitocina intravenosa e reavaliar em 4 horas
+          </button>
+          <button data-quiz-q="q2" data-quiz-opt="b" onclick="selectQuizOption('q2', 'b')" class="w-full text-left p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 text-xs text-slate-700 dark:text-slate-300 transition-all">
+            (B) Indicar parto por cesariana por parada secundária da dilatação
+          </button>
+          <button data-quiz-q="q2" data-quiz-opt="c" onclick="selectQuizOption('q2', 'c')" class="w-full text-left p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 text-xs text-slate-700 dark:text-slate-300 transition-all">
+            (C) Aplicar fórceps de alívio imediatamente
+          </button>
+          <button data-quiz-q="q2" data-quiz-opt="d" onclick="selectQuizOption('q2', 'd')" class="w-full text-left p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 text-xs text-slate-700 dark:text-slate-300 transition-all">
+            (D) Realizar analgesia peridural contínua e aguardar por mais 6 horas
+          </button>
+        </div>
+        <div id="q2-feedback" class="text-xs"></div>
+        <div class="hidden p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300">
+          <strong>Comentário USMLE:</strong> <span id="q2-explanation"></span>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4">
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span>Questão 3 · Hemorragia Pós-Parto e Contraindicações</span>
+          <span class="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 font-mono">Step 3 Gold</span>
+        </div>
+        <p class="text-sm font-semibold text-slate-900 dark:text-white leading-relaxed">
+          Uma paciente de 35 anos com pré-eclâmpsia com sinais de gravidade desenvolve atonia uterina e sangramento volumoso de 900 mL após parto vaginal normal. A pressão arterial atual é de 165/105 mmHg e a frequência cardíaca é de 102 bpm. Qual dos seguintes uterotônicos é FORMALMENTE CONTRAINDICADO nesta paciente?
+        </p>
+        <div class="space-y-2">
+          <button data-quiz-q="q3" data-quiz-opt="a" onclick="selectQuizOption('q3', 'a')" class="w-full text-left p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 text-xs text-slate-700 dark:text-slate-300 transition-all">
+            (A) Ocitocina intravenosa
+          </button>
+          <button data-quiz-q="q3" data-quiz-opt="b" onclick="selectQuizOption('q3', 'b')" class="w-full text-left p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 text-xs text-slate-700 dark:text-slate-300 transition-all">
+            (B) Misoprostol retal
+          </button>
+          <button data-quiz-q="q3" data-quiz-opt="c" onclick="selectQuizOption('q3', 'c')" class="w-full text-left p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 text-xs text-slate-700 dark:text-slate-300 transition-all">
+            (C) Metilergometrina intramuscular
+          </button>
+          <button data-quiz-q="q3" data-quiz-opt="d" onclick="selectQuizOption('q3', 'd')" class="w-full text-left p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 text-xs text-slate-700 dark:text-slate-300 transition-all">
+            (D) Ácido Tranexâmico intravenoso
+          </button>
+        </div>
+        <div id="q3-feedback" class="text-xs"></div>
+        <div class="hidden p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300">
+          <strong>Comentário USMLE:</strong> <span id="q3-explanation"></span>
+        </div>
+      </div>
+    </section>
+
+<!-- ==================== HIGH-YIELD REVIEW CHEAT SHEET ==================== -->
+    <section id="high-yield-summary" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Revisão Rápida para Prova</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Top 20 High-Yield Pearls: Parto e Puerpério</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-700 dark:text-slate-300">
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>1. Fase Ativa do Parto:</strong> Começa com <strong>6 cm de dilatação</strong> (não mais 4 cm). Antes disso, progressão lenta não define distocia.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>2. Parada de Progressão:</strong> Dilatação ≥ 6 cm + bolsa rota + ≥ 4h com contrações adequadas (≥ 200 MVU) ou ≥ 6h sem contrações com ocitocina.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>3. Manobra de McRoberts:</strong> 1ª linha na distócia de ombros (hiperflexão das coxas). Alarga o diâmetro AP da pelve.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>4. Manobra de Kristeller:</strong> FORMALMENTE PROIBIDA! Causa rotura uterina, DPP e fratura fetal.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>5. Causa Nº 1 de HPP:</strong> Atonia Uterina (70% dos casos). Tratamento: massagem + ocitocina + balão de Bakri.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>6. Mnemônico dos 4 T's:</strong> Tônus (70%), Trauma (20%), Tecido (9%), Trombina (1%).
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>7. Ácido Tranexâmico:</strong> 1g IV em ≤ 3h do início do sangramento reduz significativamente mortalidade materna (WOMAN trial).
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>8. Manejo Ativo do 3º Período:</strong> Ocitocina 10 UI IM + tração controlada do cordão + massagem reduz HPP em 60%.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>9. Metilergometrina:</strong> Contraindicada formalmente na hipertensão/pré-eclâmpsia.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>10. Episiotomia Médio-Lateral:</strong> Preferida por menor risco de laceração esfincteriana anal de 3º/4º grau comparada à mediana.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>11. Clampeamento Tardio (1-3 min):</strong> Previne anemia ferropriva na infância. Recomendação universal da OMS.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>12. Endometrite Pós-Cesárea:</strong> Cesárea é o maior fator de risco. Esquema ouro: Clindamicina + Gentamicina IV.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>13. Cefaleia Pós-Punção:</strong> Fístula de líquor. Padrão ouro definitivo: Tampão Sanguíneo Peridural (Blood Patch).
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>14. Síndrome de Sheehan:</strong> Pan-hipopituitarismo pós-choque hemorrágico no parto. 1º sinal: agalactia.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>15. Prolactina Produz, Ocitocina Ejeta:</strong> A sucção na aréola é o estímulo fisiológico central para ambos os hormônios.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>16. Mastite Puerperal:</strong> NÃO suspender o aleitamento! Manter amamentação + ordenha + Cefalexina.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>17. Baby Blues vs Depressão:</strong> Baby blues cessa em até 14 dias. Depressão dura meses e exige tratamento ativo.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>18. Psicose Puerperal:</strong> Emergência psiquiátrica imediata com risco de infanticídio. Internação compulsória.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>19. Lóquios Fétidos:</strong> Indicador clínico chave de endometrite puerperal. Exige investigação e antibiótico parenteral.
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <strong>20. ACO Combinado:</strong> Proibido nas primeiras 6 semanas pós-parto devido ao risco aumentado de TVP e impacto no leite.
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+
+<!-- FOOTER -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 py-12 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 space-y-4">
+      <div class="flex items-center justify-center gap-2 font-bold text-slate-700 dark:text-slate-300">
+        <i class="fa-solid fa-person-breastfeeding text-teal-500"></i> Plataforma Educacional de Medicina Materno-Fetal &bull; Parte 2
+      </div>
+      <p class="max-w-xl mx-auto text-slate-400">
+        Baseado nos consensos do ACOG, OMS, Ministério da Saúde do Brasil e FEBRASGO. Padrão USMLE Step 2 CK, Step 3 e Residência Médica de Alto Rendimento.
+      </p>
+      <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap justify-center gap-4 text-slate-400">
+        <a href="#modulo-12" class="hover:text-teal-500">Trabalho de Parto</a>
+        <a href="#modulo-13" class="hover:text-teal-500">Partograma</a>
+        <a href="#distocia-ombros" class="hover:text-teal-500">Distócias</a>
+        <a href="#modulo-17" class="hover:text-teal-500">Hemorragia Pós-Parto</a>
+        <a href="#modulo-18" class="hover:text-teal-500">Puerpério</a>
+        <a href="#modulo-19" class="hover:text-teal-500">Aleitamento</a>
+      </div>
+    </div>
+  </footer>
+
+<!-- ==================== MODALS & LIGHTBOXES ==================== -->
+  
+  <!-- 2. IMAGE LIGHTBOX MODAL -->
+  <div id="image-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/90 backdrop-blur-md p-4 sm:p-8" onclick="closeLightbox()">
+    <div class="relative max-w-5xl w-full bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
+      <div class="p-4 border-b border-slate-800 flex items-center justify-between">
+        <h4 id="lightbox-title" class="text-sm sm:text-base font-black text-white">Imagem Médica</h4>
+        <button onclick="closeLightbox()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center transition-colors">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="p-2 sm:p-4 flex items-center justify-center bg-black/40">
+        <img id="lightbox-img" src="" alt="Imagem Médica" class="max-w-full max-h-[70vh] object-contain rounded-xl shadow-lg">
+      </div>
+      <div class="p-4 bg-slate-900 border-t border-slate-800 text-xs text-slate-300">
+        <p id="lightbox-caption" class="leading-relaxed"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. QUICK SEARCH MODAL (Ctrl+K) -->
+  <div id="search-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4">
+    <div class="relative max-w-xl w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
+      <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center gap-3">
+        <i class="fa-solid fa-magnifying-glass text-teal-500"></i>
+        <input type="text" id="search-input" oninput="handleSearch(this.value)" placeholder="Buscar por tema (ex: McRoberts, HPP, Partograma, Lóquios)..." class="w-full bg-transparent text-slate-900 dark:text-white font-medium text-sm outline-none">
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+          <kbd class="text-[10px] px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800">ESC</kbd>
+        </button>
+      </div>
+      <div id="search-results" class="p-3 max-h-80 overflow-y-auto space-y-1">
+        <p class="text-xs text-slate-400 text-center py-6">Digite um termo para pesquisar instantaneamente no guia...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript App Logic -->
+  <script src="assets/js/app.js"></script>
+  <!-- Botão Flutuante Voltar ao Topo (FAB) -->
+  <button id="fab-back-to-top" type="button" aria-label="Voltar ao topo da página" title="Voltar ao topo" 
+    class="fab-hidden p-3 rounded-full bg-teal-600 hover:bg-teal-700 active:scale-95 text-white shadow-xl shadow-teal-600/30 border border-white/20 flex items-center justify-center transition-all cursor-pointer">
+    <i class="fa-solid fa-arrow-up text-base"></i>
+  </button>
+
+</body>
+</html>

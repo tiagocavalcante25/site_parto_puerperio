@@ -1,0 +1,68 @@
+<!-- ==================== MÓDULO 18: PUERPÉRIO FISIOLÓGICO & LÓQUIOS ==================== -->
+    <section id="modulo-18" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Módulo 18</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Puerpério Fisiológico, Involução & Lóquios</h2>
+        </div>
+        <button data-speech-btn="puerperio-content" onclick="speakSection('puerperio-content')" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold flex items-center gap-1.5 transition-all text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-volume-high text-teal-600 dark:text-teal-400"></i> Ouvir Resumo
+        </button>
+      </div>
+
+      <div id="puerperio-content" class="space-y-6">
+        <!-- Didactic Analogy Box -->
+        <div class="didactic-content p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50">
+          <div class="flex items-center gap-2 text-amber-800 dark:text-amber-300 text-xs font-bold uppercase tracking-wider mb-1">
+            <span>🎈</span> Didática para Criança de 5 Anos
+          </div>
+          <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+            Depois que o bebê nasce, o corpo da mamãe começa a <strong>arrumar a casinha</strong>. O útero que estava gigante vai encolhendo dia após dia até caber de volta dentro da bacia. A sujeirinha que sai vai mudando de cor: primeiro vermelha como groselha (lóquios rubros), depois cor-de-rosa clarinho (serosos) e por fim branquinha como leite de coco (albos).
+          </p>
+        </div>
+
+        <!-- Medical Image 5: Uterine Involution & Lochia -->
+        <div>
+          <div class="relative group cursor-pointer overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-900" onclick="openLightbox('assets/img/involucao_uterina_loquios.jpg', 'Involução Uterina e Evolução dos Lóquios no Puerpério', 'Painel comparativo ilustrando a regressão diária da altura uterina (Dia 0 na cicatriz umbilical, Dia 7 a meio caminho do púbis, Dia 10-14 intrapélvico e 6ª semana com retorno ao tamanho pré-gravídico) e a diferenciação visual e cromática dos lóquios rubros, serosos e albos.')">
+            <img src="assets/img/involucao_uterina_loquios.jpg" alt="Involução Uterina e Evolução dos Lóquios em Alta Resolução" class="w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-300">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-4 text-xs text-slate-300">
+              <strong>Clique para ampliar em tela cheia:</strong> Linha do tempo da altura uterina e os 3 estágios dos lóquios fisiológicos.
+            </div>
+          </div>
+        </div>
+
+        <!-- Lochia Summary Table -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-4 rounded-2xl bg-rose-50 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/60">
+            <div class="text-xs font-bold uppercase text-rose-600 dark:text-rose-400">1º ao 3º Dia</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Lóquios Rubros</div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Vermelho-vivo com pequenos coágulos. Composto por sangue, restos deciduais e vernix esfoliado. Odor característico suave (não fétido).</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/60">
+            <div class="text-xs font-bold uppercase text-amber-600 dark:text-amber-400">4º ao 10º Dia</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Lóquios Serosos</div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Coloração rosada a acastanhada. Redução acentuada de hemácias, aumento de exsudato seroso, leucócitos e muco cervical.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/60">
+            <div class="text-xs font-bold uppercase text-emerald-600 dark:text-emerald-400">11º ao 42º Dia</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Lóquios Albos</div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Coloração esbranquiçada a amarelada. Predomínio de leucócitos, células epiteliais, colesterol e muco até a cicatrização endometrial completa.</p>
+          </div>
+        </div>
+
+        <!-- Contraception in Puerperium -->
+        <div class="p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-xs">
+          <h4 class="font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-pills text-teal-500"></i> Regras de Ouro da Contracepção no Puerpério:
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-600 dark:text-slate-300">
+            <div>
+              <strong>Métodos Progestagênicos ou DIU:</strong> Minipílula (desogestrel), implante de etonogestrel e DIU (cobre ou levonorgestrel) podem ser iniciados no pós-parto imediato ou com 6 semanas, sem interferir no aleitamento.
+            </div>
+            <div class="text-rose-600 dark:text-rose-400 font-medium">
+              <strong>Anticoncepcional Combinado Oral (ACO):</strong> Formalmente CONTRAINDICADO antes de 6 semanas pós-parto (ou 6 meses se em amamentação exclusiva) pelo risco acentuado de Trombose Venosa Profunda (TVP) e inibição da produção láctea.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

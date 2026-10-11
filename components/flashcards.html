@@ -1,0 +1,140 @@
+<!-- ==================== FLASHCARDS 3D INTERATIVOS ==================== -->
+    <section id="flashcards-section" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Treinamento Ativo & Repetição Espaçada</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">20 Flashcards Interativos 3D</h2>
+        </div>
+        <div class="text-xs text-slate-400 font-medium hidden sm:block">Clique no card para girar</div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <!-- Flashcard 1 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 1 · Mecanismo</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual é o menor diâmetro cefálico apresentado na atitude fletida de vértice?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>Diâmetro Suboccipitobregmático</strong>, medindo aproximadamente <strong>9,5 cm</strong> (ponto de referência: Lambda / fontanela posterior).</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 2 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 2 · Partograma</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual é a definição atual de início da fase ativa do trabalho de parto segundo a OMS e o ACOG?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>6 cm de dilatação</strong> cervical (critério de Zhang, 2010; substituiu a antiga definição de 4 cm de Friedman).</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 3 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 3 · Distócias</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual é a PRIMEIRA manobra a ser realizada no diagnóstico de Distócia de Ombros?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>Manobra de McRoberts</strong> (hiperflexão das coxas maternas contra o abdome), associada à pressão suprapúbica (Rubin I).</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 4 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 4 · HPP</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual uterotônico é formalmente CONTRAINDICADO em pacientes com hipertensão ou pré-eclâmpsia?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>Metilergometrina (Ergot)</strong>, pelo risco severo de vasoconstrição periférica súbita, pico hipertensivo e AVC.</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 5 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 5 · Aleitamento</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual hormônio é responsável pela PRODUÇÃO láctea e qual é responsável pela EJEÇÃO do leite?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>Prolactina</strong> (adeno-hipófise) produz o leite nos alvéolos; <strong>Ocitocina</strong> (neuro-hipófise) contrai as células mioepiteliais e ejeta o leite.</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 6 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 6 · Endometrite</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual é o esquema antibiótico parenteral de primeira escolha para Endometrite Pós-Cesárea?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>Clindamicina 900 mg IV de 8/8h + Gentamicina 5 mg/kg/dia IV</strong> em dose única diária (esquema padrão ouro).</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 7 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 7 · Anestesia</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual é o tratamento definitivo e padrão ouro para cefaleia pós-punção dural refratária?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>Tampão Sanguíneo Peridural (Epidural Blood Patch)</strong>: injeção de 15 a 20 mL de sangue autólogo no espaço peridural para selar a fístula liquórica.</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 8 -->
+        <div class="flashcard perspective-1000 h-48 cursor-pointer" onclick="toggleFlashcard(this)">
+          <div class="flashcard-inner relative w-full h-full transform-style-preserve-3d transition-transform duration-500">
+            <div class="absolute inset-0 backface-hidden p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Card 8 · Saúde Mental</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white leading-relaxed">Qual é a diferença temporal e clínica entre Baby Blues e Depressão Pós-Parto?</p>
+              <span class="text-[10px] text-slate-400">Toque para ver a resposta &rarr;</span>
+            </div>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 p-5 rounded-2xl bg-teal-600 text-white shadow-md flex flex-col justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">Resposta</span>
+              <p class="text-xs font-medium leading-relaxed"><strong>Baby Blues:</strong> autolimitado, dura até 14 dias (choro fácil e labilidade). <strong>Depressão:</strong> persiste > 2 semanas, tristeza profunda, anedonia e culpa (exige psicoterapia/ISRS).</p>
+              <span class="text-[10px] text-teal-200">Girar de volta &circlearrowleft;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

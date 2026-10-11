@@ -1,0 +1,62 @@
+<!-- ==================== MÓDULO 19: ALEITAMENTO MATERNO ==================== -->
+    <section id="modulo-19" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Módulo 19</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Aleitamento Materno: Neuroendocrinologia & Pega Correta</h2>
+        </div>
+        <button data-speech-btn="amamentacao-content" onclick="speakSection('amamentacao-content')" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold flex items-center gap-1.5 transition-all text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-volume-high text-teal-600 dark:text-teal-400"></i> Ouvir Resumo
+        </button>
+      </div>
+
+      <div id="amamentacao-content" class="space-y-6">
+        <!-- Didactic Analogy Box -->
+        <div class="didactic-content p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50">
+          <div class="flex items-center gap-2 text-amber-800 dark:text-amber-300 text-xs font-bold uppercase tracking-wider mb-1">
+            <span>🎈</span> Didática para Criança de 5 Anos
+          </div>
+          <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+            Na fábrica do leite da mamãe trabalham dois ajudantes: a <strong>Prolactina</strong> é a cozinheira que faz o leite delicioso dentro das panelinhas (alvéolos). A <strong>Ocitocina</strong> é o garçom que aperta as panelinhas para espirrar o leite na boquinha do bebê! E para o bebê mamar sem dor na mamãe, ele precisa abrir a boca bem grandona como um peixinho e abocanhar a rodela escura toda (a aréola), e não só a pontinha!
+          </p>
+        </div>
+
+        <!-- Medical Image 6: Breastfeeding Latch & Hormones -->
+        <div>
+          <div class="relative group cursor-pointer overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-900" onclick="openLightbox('assets/img/amamentacao_neuroendocrinologia_pega.jpg', 'Anatomia Materna, Neuroendocrinologia da Lactação e Técnica da Pega Correta', 'Painel duplo em alta resolução: à esquerda, o eixo neuroendócrino com a prolactina estimulando a síntese de leite nos alvéolos e a ocitocina contraindo as células mioepiteliais na ejeção; à direita, a técnica da pega correta com ângulo labial > 120°, lábio inferior evertido em peixinho, queixo encostado na mama e nariz livre.')">
+            <img src="assets/img/amamentacao_neuroendocrinologia_pega.jpg" alt="Neuroendocrinologia da Lactação e Pega Correta em Alta Resolução" class="w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-300">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-4 text-xs text-slate-300">
+              <strong>Clique para ampliar em tela cheia:</strong> Fisiologia hormonal (Prolactina vs Ocitocina) e os critérios anatômicos da pega correta.
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Latch Criteria & Mastitis Pearls -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+            <h4 class="font-bold text-teal-600 dark:text-teal-400 text-sm flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-emerald-500"></i> Critérios da Pega Correta (Sem Dor):
+            </h4>
+            <ul class="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-300">
+              <li><strong>Boca bem aberta:</strong> Ângulo de abertura superior a 120°.</li>
+              <li><strong>Lábios evertidos:</strong> Lábio inferior voltado para fora ("boca de peixe").</li>
+              <li><strong>Pega assimétrica:</strong> Mais aréola visível acima do lábio superior do que abaixo.</li>
+              <li><strong>Queixo tocando a mama:</strong> Contato firme sem obstruir as narinas do recém-nascido.</li>
+              <li><strong>Bochechas arredondadas:</strong> Sem covinhas ou estalos durante a sucção.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-rose-50 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/60 space-y-2">
+            <h4 class="font-bold text-rose-600 dark:text-rose-400 text-sm flex items-center gap-2">
+              <i class="fa-solid fa-shield-virus text-rose-500"></i> Manejo da Mastite Puerperal:
+            </h4>
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+              Infecção aguda por <em>Staphylococcus aureus</em>. Quadro de febre, calafrios, eritema em cunha doloroso e ingurgitamento mamário.
+            </p>
+            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-rose-300 dark:border-rose-800 text-rose-800 dark:text-rose-300 font-bold">
+              ⭐ REGRA DE OURO USMLE: NÃO SUSPENDER A AMAMENTAÇÃO! Manter o esvaziamento mamário através das mamadas e ordenha, associado a antibióticos (Cefalexina / Dicloxacilina) e analgesia.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

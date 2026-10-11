@@ -1,0 +1,111 @@
+<!-- ==================== MÓDULO 16: DISTÓCIAS & SIMULADOR HELPERR ==================== -->
+    <section id="distocia-ombros" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">Módulo 16 · Emergência Obstétrica</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Distócia de Ombros & O Algoritmo HELPERR</h2>
+        </div>
+        <button data-speech-btn="distocia-content" onclick="speakSection('distocia-content')" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold flex items-center gap-1.5 transition-all text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-volume-high text-teal-600 dark:text-teal-400"></i> Ouvir Resumo
+        </button>
+      </div>
+
+      <div id="distocia-content" class="space-y-6">
+        <!-- Didactic Analogy Box -->
+        <div class="didactic-content p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50">
+          <div class="flex items-center gap-2 text-amber-800 dark:text-amber-300 text-xs font-bold uppercase tracking-wider mb-1">
+            <span>🎈</span> Didática para Criança de 5 Anos
+          </div>
+          <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+            A distócia de ombros é como tentar <strong>tirar uma rolha gordinha de dentro de uma garrafa</strong>: a pontinha saiu (a cabeça do bebê), mas os bracinhos ficaram travados atrás do osso duro da mamãe (sínfise púbica). O médico não pode puxar a cabeça com força para não machucar o pescocinho! Em vez disso, dobra as pernas da mamãe bem para cima (McRoberts) e aperta em cima do osso para destravar o ombrinho!
+          </p>
+        </div>
+
+        <!-- Medical Image 3: Shoulder Dystocia -->
+        <div>
+          <div class="relative group cursor-pointer overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-900" onclick="openLightbox('assets/img/distocia_ombros_mcroberts.jpg', 'Emergência Obstétrica: Distócia de Ombros e Manobras de McRoberts e Rubin', 'Ilustração médica em corte sagital mostrando o impacto do ombro anterior fetal atrás da sínfise púbica materna (Sinal da Tartaruga) e a execução da manobra de McRoberts com hiperflexão das coxas maternas associada à pressão suprapúbica (Rubin I).')">
+            <img src="assets/img/distocia_ombros_mcroberts.jpg" alt="Distócia de Ombros e Manobra de McRoberts em Alta Resolução" class="w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-300">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-4 text-xs text-slate-300">
+              <strong>Clique para ampliar em tela cheia:</strong> Anatomia da distócia de ombros, sinal da tartaruga e desimpactação com McRoberts + Rubin I.
+            </div>
+          </div>
+        </div>
+
+        <!-- HELPERR INTERACTIVE TRAINER -->
+        <div class="p-6 rounded-3xl bg-slate-900 text-white shadow-xl space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-400">Treinador de Emergência com Cronômetro</span>
+              <h3 class="text-xl font-black text-white">Algoritmo Mnemônico HELPERR</h3>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-2xl font-mono font-black text-rose-400 bg-slate-950 px-4 py-1.5 rounded-xl border border-slate-800 shadow-inner" id="helperr-clock">00:00</div>
+              <button id="helperr-start-btn" onclick="toggleHelperrTimer()" class="px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs flex items-center gap-2 transition-all shadow-md">
+                <i class="fa-solid fa-play"></i> Iniciar Cronômetro
+              </button>
+            </div>
+          </div>
+
+          <div id="helperr-time-alert" class="p-3 rounded-xl bg-teal-950/50 text-teal-300 border border-teal-800 text-xs font-semibold">
+            Tempo decorrido: O objetivo é a desimpactação segura em até 2 a 3 minutos para evitar encefalopatia anóxica e acidose fetal grave.
+          </div>
+
+          <!-- 7 Steps of HELPERR -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+              <div class="flex items-center gap-2 font-black text-rose-400 text-sm mb-1">
+                <span>H</span> Help (Ajuda Imediata)
+              </div>
+              <p class="text-slate-300">Chamar neonatologista, anestesista, equipe de enfermagem obstétrica e solicitar materiais cirúrgicos adicionais.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+              <div class="flex items-center gap-2 font-black text-amber-400 text-sm mb-1">
+                <span>E</span> Evaluate for Episiotomy
+              </div>
+              <p class="text-slate-300">Avaliar necessidade de episiotomia ampla para dar espaço às manobras manuais internas (não resolve a distocia óssea).</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-teal-500 shadow-md shadow-teal-500/10">
+              <div class="flex items-center gap-2 font-black text-teal-400 text-sm mb-1">
+                <span>L</span> Legs (Manobra de McRoberts)
+              </div>
+              <p class="text-slate-300 font-medium"><strong>1ª Manobra Obrigatória:</strong> Hiperflexão e abdução das coxas maternas contra o abdome. Retifica a curvatura sacral e alarga a pelve.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-teal-500 shadow-md shadow-teal-500/10">
+              <div class="flex items-center gap-2 font-black text-teal-400 text-sm mb-1">
+                <span>P</span> Pressure (Pressão Suprapúbica)
+              </div>
+              <p class="text-slate-300 font-medium"><strong>Manobra de Rubin I:</strong> Pressão no dorso do ombro anterior em sentido oblíquo para desimpactá-lo da sínfise. <strong>NUNCA fúndica!</strong></p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+              <div class="flex items-center gap-2 font-black text-cyan-400 text-sm mb-1">
+                <span>E</span> Enter (Manobras Internas)
+              </div>
+              <p class="text-slate-300"><strong>Rubin II</strong> (pressão na face posterior do ombro anterior) ou <strong>Woods Screw</strong> (rotação do ombro posterior em saca-rolhas por 180°).</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+              <div class="flex items-center gap-2 font-black text-indigo-400 text-sm mb-1">
+                <span>R</span> Remove Posterior Arm
+              </div>
+              <p class="text-slate-300">Flexionar o cotovelo e capturar a mão fetal, tracionando o braço posterior sobre o tórax fetal para fora da vagina.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 col-span-1 sm:col-span-2 lg:col-span-3">
+              <div class="flex items-center gap-2 font-black text-purple-400 text-sm mb-1">
+                <span>R</span> Roll (Manobra de Gaskin)
+              </div>
+              <p class="text-slate-300">Colocar a paciente em posição de quatro apoios (mãos e joelhos). A gravidade e a mudança nos diâmetros conjugados frequentemente desimpactam o ombro posterior.</p>
+            </div>
+          </div>
+
+          <!-- Forbidden Maneuvers -->
+          <div class="p-4 rounded-2xl bg-rose-950/40 border border-rose-800 text-rose-200 text-xs">
+            <h5 class="font-bold text-rose-300 mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-ban text-rose-500"></i> Manobras Proibidas e Fatais na Distócia de Ombros:
+            </h5>
+            <ul class="list-disc list-inside space-y-1 text-slate-300">
+              <li><strong>Manobra de Kristeller (Pressão no Fundo Uterino):</strong> Formalmente proibida! Aumenta a impactação do ombro contra o púbis e causa rotura uterina e descolamento de placenta.</li>
+              <li><strong>Tração excessiva na cabeça ou torção cervical:</strong> Causa estiramento do plexo braquial com paralisia permanente de <strong>Erb-Duchenne (C5-C6 - 'garçom pedindo gorjeta')</strong> ou Klumpke (C8-T1).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>

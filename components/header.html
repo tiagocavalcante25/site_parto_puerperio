@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Assistência ao Parto & Puerpério | Guia Interativo USMLE Step 2/3 & Ivy League</title>
+  
+  <!-- Meta tags for SEO, Mobile Web App & Social Sharing -->
+  <meta name="description" content="Guia definitivo e plataforma interativa de Assistência ao Parto e Puerpério. Cobre mecanismo do parto, partograma da OMS, distócias, analgesia, HPP, aleitamento materno e complicações puerperais para USMLE Step 2 CK, Step 3 e Residência Médica.">
+  <meta name="keywords" content="parto, puerpério, partograma, distócia de ombros, McRoberts, hemorragia pós-parto, balão de Bakri, endometrite, USMLE Step 2 CK, aleitamento materno">
+  <meta name="author" content="Internato GO & Deep Learning Medical Hub">
+  <meta name="theme-color" content="#0d9488">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-200 antialiased selection:bg-teal-500 selection:text-white">
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-50 glass-header border-b border-slate-200/80 dark:border-slate-800/80 shadow-sm relative">
+    <div class="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 min-h-[3.75rem] sm:min-h-[4rem] py-1.5 sm:py-2 flex items-center justify-between gap-1.5 sm:gap-4">
+      
+      <!-- Brand & Title (Responsive: adapts gracefully from 320px to 4K) -->
+      <a href="#modulo-12" class="flex items-center gap-2 sm:gap-3 group min-w-0 flex-1 sm:flex-initial" title="Ir para o início do Guia de Parto & Puerpério">
+        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-teal-600 to-emerald-500 flex items-center justify-center text-white shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform shrink-0">
+          <i class="fa-solid fa-person-breastfeeding text-sm sm:text-lg"></i>
+        </div>
+        <div class="min-w-0 overflow-hidden">
+          <span class="text-[9px] sm:text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400 block leading-tight truncate">Guia Clínico</span>
+          <h1 class="text-sm sm:text-lg font-black tracking-tight text-slate-900 dark:text-white leading-tight truncate flex items-center gap-1">
+            <span class="truncate">Parto & Puerpério</span>
+            <span class="shrink-0 text-[9px] sm:text-xs px-1.5 py-0.5 rounded-full bg-teal-500/10 text-teal-600 dark:text-teal-400 font-bold">
+              <span class="hidden xs:inline">Parte </span>2
+            </span>
+          </h1>
+        </div>
+      </a>
+
+      <!-- Quick Nav Links (Large Screens / Tablets Landscape) -->
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 text-xs xl:text-sm font-semibold text-slate-600 dark:text-slate-300">
+        <a href="#modulo-12" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Mecanismo</a>
+        <a href="#modulo-13" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Partograma</a>
+        <a href="#distocia-ombros" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Distócias</a>
+        <a href="#modulo-17" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">HPP (4 T's)</a>
+        <a href="#modulo-18" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Puerpério</a>
+        <a href="#modulo-19" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Aleitamento</a>
+        <a href="#flashcards-section" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Flashcards 3D</a>
+        <a href="#quiz-section" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Simulado</a>
+      </nav>
+
+      <!-- Action Buttons & Utilities -->
+      <div class="flex items-center gap-1 sm:gap-2 shrink-0">
+        <!-- Quick Search Trigger Button (Ctrl+K) -->
+        <button onclick="openSearchModal()" title="Pesquisa Rápida (Ctrl+K)" class="p-1.5 sm:px-3 sm:py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 text-slate-600 dark:text-slate-300 hover:border-teal-500 text-xs font-medium flex items-center gap-1.5 transition-all cursor-pointer">
+          <i class="fa-solid fa-magnifying-glass text-teal-500 text-sm"></i>
+          <span class="hidden md:inline">Buscar...</span>
+          <kbd class="hidden xl:inline-block px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[10px] text-slate-400">Ctrl K</kbd>
+        </button>
+
+        <!-- Didactic Mode Toggle (Desktop) -->
+        <div class="hidden xl:flex items-center gap-2 px-3 py-1 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs font-bold text-amber-700 dark:text-amber-400" title="Ativa ou destaca as analogias lúdicas (Modo 5 Anos)">
+          <label for="didactic-toggle" class="cursor-pointer flex items-center gap-1.5">
+            <span>🎈 Modo 5 Anos</span>
+            <input type="checkbox" id="didactic-toggle" checked onchange="toggleDidacticMode()" class="sr-only peer">
+            <div class="w-8 h-4 bg-slate-300 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-amber-500"></div>
+          </label>
+        </div>
+
+        <!-- Seletor Dinâmico de Tamanho de Fonte (A / A+ / A++) -->
+        <div class="hidden sm:inline-flex items-center bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-0.5" title="Ajustar tamanho da fonte para leitura confortável">
+          <button type="button" onclick="setFontSize('normal')" data-font-btn="normal" aria-label="Fonte padrão" title="Fonte padrão" class="font-size-btn px-2 py-1 text-xs font-bold rounded-lg transition-colors">A</button>
+          <button type="button" onclick="setFontSize('large')" data-font-btn="large" aria-label="Fonte ampliada" title="Fonte ampliada (+15%)" class="font-size-btn px-2 py-1 text-xs font-bold rounded-lg transition-colors">A+</button>
+          <button type="button" onclick="setFontSize('xlarge')" data-font-btn="xlarge" aria-label="Fonte máxima" title="Fonte máxima (+30%)" class="font-size-btn px-2 py-1 text-xs font-black rounded-lg transition-colors">A++</button>
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <button onclick="toggleDarkMode()" title="Alternar tema claro/escuro" class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:text-teal-500 flex items-center justify-center transition-all cursor-pointer">
+          <i id="theme-icon" class="fa-solid fa-moon text-sm sm:text-base"></i>
+        </button>
+
+        <!-- Print / PDF Export Button -->
+        <button onclick="window.print()" title="Exportar ou Imprimir Resumo" class="hidden sm:flex p-2 sm:px-3 sm:py-1.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold items-center gap-1.5 transition-all shadow-md shadow-teal-500/20 cursor-pointer">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span class="hidden md:inline">PDF</span>
+        </button>
+
+        <!-- Mobile Menu Button (Hamburger) - Visible on screens < lg -->
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" title="Abrir Menu de Navegação" class="lg:hidden w-8 h-8 sm:w-10 sm:h-10 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:border-teal-500 flex items-center justify-center transition-all cursor-pointer" aria-label="Abrir Menu">
+          <i class="fa-solid fa-bars text-sm sm:text-base"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- READING PROGRESS BAR - Attached right at header bottom -->
+    <div id="reading-progress" class="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-teal-400 via-emerald-500 to-cyan-500 z-50 transition-all duration-150 pointer-events-none" style="width: 0%"></div>
+  </header>

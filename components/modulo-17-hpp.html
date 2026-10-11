@@ -1,0 +1,136 @@
+<!-- ==================== MÓDULO 17: HPP, 4 T's & BALÃO DE BAKRI ==================== -->
+    <section id="modulo-17" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">Módulo 17 · Emergência Materna</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Hemorragia Pós-Parto (HPP) & O Algoritmo dos 4 T's</h2>
+        </div>
+        <button data-speech-btn="hpp-content" onclick="speakSection('hpp-content')" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold flex items-center gap-1.5 transition-all text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-volume-high text-teal-600 dark:text-teal-400"></i> Ouvir Resumo
+        </button>
+      </div>
+
+      <div id="hpp-content" class="space-y-6">
+        <!-- Didactic Analogy Box -->
+        <div class="didactic-content p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50">
+          <div class="flex items-center gap-2 text-amber-800 dark:text-amber-300 text-xs font-bold uppercase tracking-wider mb-1">
+            <span>🎈</span> Didática para Criança de 5 Anos
+          </div>
+          <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+            Depois que o bebê nasce, o útero precisa <strong>apertar como um punho bem fechado</strong> para fechar as torneirinhas de sangue onde a placenta estava colada. Se o útero ficar cansado e mole como uma massinha (atonia), o sangue vaza sem parar. Para salvar a mamãe, a gente dá remédios que fazem o útero ficar durinho de novo e coloca uma bexiguinha de água lá dentro (o Balão de Bakri) para tampar o sangramento por dentro!
+          </p>
+        </div>
+
+        <!-- The 4 T's Summary Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-bold uppercase text-rose-600 dark:text-rose-400">1. Tônus (70%)</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Atonia Uterina</div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Causa nº 1 no mundo. Útero amolecido, sem globo de Pinard pós-sobredistensão ou parto prolongado.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-bold uppercase text-amber-600 dark:text-amber-400">2. Trauma (20%)</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Lacerações & Hematomas</div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Laceração de colo, vagina, períneo 3º/4º grau, rotura uterina e inversão uterina aguda.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-bold uppercase text-cyan-600 dark:text-cyan-400">3. Tecido (9%)</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Restos & Acretismo</div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Cotilédones placentários retidos, coágulos intracavitários ou espectro do acretismo placentário.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-bold uppercase text-purple-600 dark:text-purple-400">4. Trombina (1%)</div>
+            <div class="text-base font-black text-slate-900 dark:text-white">Coagulopatias & CIVD</div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">CIVD secundária a DPP, embolia amniótica, HELLP syndrome, sepse ou uso de anticoagulantes.</p>
+          </div>
+        </div>
+
+        <!-- Medical Image 4: PPH & Bakri Balloon -->
+        <div>
+          <div class="relative group cursor-pointer overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-900" onclick="openLightbox('assets/img/hemorragia_pos_parto_balao_bakri.jpg', 'Manejo da Hemorragia Pós-Parto (HPP): Balão de Tamponamento Intrauterino (Bakri)', 'Visão anatômica do útero pós-parto atônico preenchido pelo Balão de Bakri insuflado com 300 a 500 mL de solução salina. A pressão hidrostática comprime os vasos miometriais abertos contra a parede uterina, enquanto a porta de drenagem monitora o débito contínuo de sangramento.')">
+            <img src="assets/img/hemorragia_pos_parto_balao_bakri.jpg" alt="Manejo da Hemorragia Pós-Parto e Balão de Bakri em Alta Resolução" class="w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-300">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-4 text-xs text-slate-300">
+              <strong>Clique para ampliar em tela cheia:</strong> Mecanismo do Balão de Bakri, tamponamento miometrial e saída de drenagem coletora.
+            </div>
+          </div>
+        </div>
+
+        <!-- INTERACTIVE HPP & SHOCK INDEX CALCULATOR -->
+        <div id="calculadora-hpp" class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">Ferramenta Interativa de Emergência</span>
+              <h3 class="text-xl font-black text-slate-900 dark:text-white">Calculadora do Índice de Choque Obstétrico & Conduta</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-slate-500">Índice de Choque (FC/PAS):</span>
+              <span id="shock-index-val" class="text-2xl font-mono font-black text-rose-600 dark:text-rose-400">0.67</span>
+            </div>
+          </div>
+
+          <!-- Input Fields -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-500 dark:text-slate-400 mb-1">Perda Estimada (mL)</label>
+              <input type="number" id="hpp-loss-input" value="600" step="50" oninput="calculateHPP()" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-rose-500">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-500 dark:text-slate-400 mb-1">Frequência Cardíaca (bpm)</label>
+              <input type="number" id="hpp-hr-input" value="80" step="1" oninput="calculateHPP()" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-rose-500">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-500 dark:text-slate-400 mb-1">PA Sistólica (mmHg)</label>
+              <input type="number" id="hpp-sbp-input" value="120" step="1" oninput="calculateHPP()" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-rose-500">
+            </div>
+          </div>
+
+          <!-- Comorbidity Check -->
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50">
+            <input type="checkbox" id="has-hypertension-check" onchange="calculateHPP()" class="w-4 h-4 text-rose-600 rounded focus:ring-rose-500">
+            <label for="has-hypertension-check" class="text-xs font-bold text-amber-900 dark:text-amber-200 cursor-pointer">
+              Paciente com Hipertensão Prévia ou Pré-eclâmpsia (Ativa verificação de contraindicação de alcaloides do ergot)
+            </label>
+          </div>
+
+          <!-- Dynamic Output Card -->
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs uppercase font-bold text-slate-400">Classificação Hemodinâmica:</span>
+              <span id="shock-index-badge" class="text-xs px-2.5 py-1 rounded-full font-bold bg-yellow-100 text-yellow-800">HPP Leve a Moderada</span>
+            </div>
+            <!-- Progress Gauge -->
+            <div class="w-full h-2.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+              <div id="shock-index-bar" class="h-full bg-yellow-500 rounded-full transition-all duration-300" style="width: 50%"></div>
+            </div>
+            <!-- Action Needed -->
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300">
+              <strong>Conduta Imediata:</strong> <span id="hpp-action-alert">Iniciar protocolo de 1ª linha: Ocitocina IV em infusão rápida, esvaziamento vesical e massagem uterina contínua.</span>
+            </div>
+            <!-- Ergometrine Alert (Conditional) -->
+            <div id="ergometrine-contraindicated-alert" class="hidden p-3 rounded-xl bg-rose-600 text-white font-bold text-xs flex items-center gap-2">
+              <i class="fa-solid fa-triangle-exclamation text-base"></i>
+              <span>ALERTA CRÍTICO: METILERGOMETRINA FORMALMENTE CONTRAINDICADA! Paciente hipertensa apresenta risco severo de crise hipertensiva aguda e AVC. Usar Misoprostol ou Ácido Tranexâmico!</span>
+            </div>
+          </div>
+
+          <!-- Stepped Uterotonic Algorithm -->
+          <div class="pt-2">
+            <h4 class="text-xs font-bold uppercase text-slate-500 mb-2">Escada Terapêutica Escalonada de Uterotônicos</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 text-xs">
+              <div class="p-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200">
+                <strong>1ª Linha: Ocitocina</strong><br>20-40 UI em 1000 mL SF IV contínuo.
+              </div>
+              <div class="p-2.5 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-200">
+                <strong>2ª Linha: Metilergometrina</strong><br>0,2 mg IM (se normotensa).
+              </div>
+              <div class="p-2.5 rounded-xl bg-cyan-50 dark:bg-cyan-950/40 border border-cyan-200 dark:border-cyan-800 text-cyan-800 dark:text-cyan-200">
+                <strong>3ª Linha: Misoprostol</strong><br>800 &mu;g retal ou sublingual.
+              </div>
+              <div class="p-2.5 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 text-rose-800 dark:text-rose-200">
+                <strong>Ácido Tranexâmico</strong><br>1g IV em ≤ 3h (WOMAN trial).
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

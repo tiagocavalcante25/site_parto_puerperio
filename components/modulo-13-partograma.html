@@ -1,0 +1,99 @@
+<!-- ==================== MÓDULO 13: PARTOGRAMA & SIMULADOR ==================== -->
+    <section id="modulo-13" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Módulo 13</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Partograma da OMS & Diagnóstico de Distocias</h2>
+        </div>
+        <button data-speech-btn="modulo-13-content" onclick="speakSection('modulo-13-content')" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold flex items-center gap-1.5 transition-all text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-volume-high text-teal-600 dark:text-teal-400"></i> Ouvir Resumo
+        </button>
+      </div>
+
+      <div id="modulo-13-content" class="space-y-6">
+        <!-- Didactic Analogy Box -->
+        <div class="didactic-content p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50">
+          <div class="flex items-center gap-2 text-amber-800 dark:text-amber-300 text-xs font-bold uppercase tracking-wider mb-1">
+            <span>🎈</span> Didática para Criança de 5 Anos
+          </div>
+          <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+            O partograma é como o <strong>mapa com velocímetro do parto</strong>. Ele tem duas linhas guias desenhadas na folha: a <strong>linha amarela (Alerta)</strong> e a <strong>linha vermelha (Ação)</strong>. Se o barquinho do bebê navegar devagar demais e bater na linha vermelha, o médico sabe que o parto "emperrou" e precisa intervir para ajudar o bebê a nascer logo e seguro!
+          </p>
+        </div>
+
+        <!-- Medical Image 2: Partograph -->
+        <div>
+          <div class="relative group cursor-pointer overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-900" onclick="openLightbox('assets/img/partograma_oms_curvas.jpg', 'Partograma da OMS: Registro Gráfico do Trabalho de Parto', 'Gráfico bidimensional relacionando o tempo de trabalho de parto no eixo X e a dilatação cervical (0-10 cm) no eixo Y. Destaca a Linha de Alerta (início em 6 cm com velocidade esperada de 1 cm/h), Linha de Ação (4 horas à direita), e registros simultâneos de dinâmica uterina, BCF e descida fetal.')">
+            <img src="assets/img/partograma_oms_curvas.jpg" alt="Partograma da OMS com Curvas e Linhas de Alerta e Ação" class="w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-300">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-4 text-xs text-slate-300">
+              <strong>Clique para ampliar em tela cheia:</strong> Estrutura do Partograma da OMS com curvas de dilatação, descida fetal e linhas de alerta/ação.
+            </div>
+          </div>
+        </div>
+
+        <!-- INTERACTIVE PARTOGRAPH SIMULATOR -->
+        <div id="simulador-partograma" class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Simulador Clínico Interativo</span>
+              <h3 class="text-xl font-black text-slate-900 dark:text-white">Curvas de Partograma em Tempo Real</h3>
+            </div>
+            <!-- Scenario Selector Buttons -->
+            <div class="flex flex-wrap gap-2">
+              <button id="btn-scenario-normal" onclick="selectPartographScenario('normal')" class="scenario-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-teal-600 text-white shadow-md transition-all">
+                Parto Normal
+              </button>
+              <button id="btn-scenario-prolonged" onclick="selectPartographScenario('prolonged')" class="scenario-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 transition-all border border-slate-200 dark:border-slate-700">
+                Fase Ativa Prolongada
+              </button>
+              <button id="btn-scenario-arrest_dilation" onclick="selectPartographScenario('arrest_dilation')" class="scenario-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 transition-all border border-slate-200 dark:border-slate-700">
+                Parada de Dilatação
+              </button>
+              <button id="btn-scenario-arrest_descent" onclick="selectPartographScenario('arrest_descent')" class="scenario-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 transition-all border border-slate-200 dark:border-slate-700">
+                Parada de Descida
+              </button>
+            </div>
+          </div>
+
+          <!-- Canvas Container -->
+          <div class="relative w-full overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-2">
+            <canvas id="partograph-canvas" width="900" height="420" class="w-full h-auto block"></canvas>
+          </div>
+
+          <!-- Dynamic Diagnostic Output -->
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="text-xs uppercase font-bold text-slate-400">Diagnóstico Clínico:</span>
+              <span id="parto-diag-title" class="text-base font-black text-emerald-600 dark:text-emerald-400">Evolução Eutócica Fisiológica</span>
+            </div>
+            <p id="parto-diag-desc" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Início da fase ativa em 6 cm. Progressão rápida e constante a ≥ 1 cm/h, mantendo-se à esquerda da Linha de Alerta.
+            </p>
+            <div class="p-3 rounded-xl bg-teal-50 dark:bg-teal-950/40 border border-teal-200 dark:border-teal-800 text-xs text-teal-800 dark:text-teal-200">
+              <strong>Conduta Recomendada:</strong> <span id="parto-diag-action">Manter assistência humanizada de rotina, suporte contínuo e ausculta intermitente da FCF.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- USMLE Criteria for Arrest of Labor -->
+        <div class="p-5 rounded-2xl bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-900/50">
+          <h4 class="text-sm font-bold text-rose-800 dark:text-rose-300 mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-triangle-exclamation text-rose-500"></i> Critérios Rígidos de Parada de Progressão (ACOG / USMLE Gold Standard)
+          </h4>
+          <p class="text-xs sm:text-sm text-rose-900 dark:text-rose-200 leading-relaxed mb-3">
+            Para fechar diagnóstico de <strong>falha de progressão da fase ativa (indicação de cesárea)</strong>, é obrigatório preencher <strong>TODOS</strong> os seguintes requisitos prévios:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-900 font-medium">
+              1. Dilatação cervical mínima de <strong>≥ 6 cm</strong> (início verdadeiro da fase ativa).
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-900 font-medium">
+              2. <strong>Bolsa rota</strong> (membranas amnióticas rotas espontânea ou artificialmente).
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-900 font-medium">
+              3. Sem progressão por <strong>≥ 4 horas com contrações adequadas (≥ 200 MVU)</strong> OU <strong>≥ 6 horas com contrações inadequadas com ocitocina</strong>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
